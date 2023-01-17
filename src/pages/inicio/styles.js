@@ -13,10 +13,23 @@ const Styles = StyleSheet.create({
     marginLeft: 90,
     alignSelf: "center",
   },
-  texto: {
-    color: "black",
-    fontSize: 18,
+  gravar: {
+    top: 80,
+    fontFamily: "Sofia Sans",
+    fontSize: 17,
+    color: "#3B3355",
+    fontWeight: "500",
+    lineHeight: 20,
   },
+  ouvir: {
+    top: 60,
+    fontFamily: "Sofia Sans",
+    fontSize: 17,
+    color: "#3B3355",
+    fontWeight: "500",
+    lineHeight: 20,
+  },
+
   icon: {
     borderRadius: 100,
     backgroundColor: "#95a5ba",
@@ -33,6 +46,17 @@ const Styles = StyleSheet.create({
     fontSize: 18,
     alignSelf: "center",
     top: 320,
+    opacity: 0.6,
+  },
+  timer: {
+    position: "absolute",
+    bottom: 350,
+    alignSelf: "center",
+    fontFamily: "Sofia Sans",
+    fontWeight: "500",
+    fontSize: 50,
+    lineHeight: 100,
+    color: "#3B3355",
   },
 });
 export default Styles;

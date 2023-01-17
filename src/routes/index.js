@@ -22,7 +22,7 @@ export default function StackNavigation() {
           headerStyle: {
             backgroundColor: "white",
           },
-          headerTintColor: "black",
+          headerTintColor: "#3B3355",
           headerLeft: () => (
             <TouchableOpacity>
               <Icon name="menu" color="black" size={40}></Icon>
@@ -39,6 +39,7 @@ export default function StackNavigation() {
         name="Tela2"
         component={Tela2}
         options={{
+          headerShown: false,
           headerStyle: {
             backgroundColor: "white",
           },
