@@ -23,7 +23,10 @@ const Styles = StyleSheet.create({
     height: 90,
     width: 90,
     alignSelf: "center",
-    top: 450,
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+    bottom: 60,
   },
   texto2: {
     color: "grey",

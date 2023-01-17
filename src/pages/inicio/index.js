@@ -17,8 +17,9 @@ export default function AppInicio() {
 
       <Text style={Styles.texto2}>Pronto para começar</Text>
 
-      <TouchableOpacity></TouchableOpacity>
-      <Icon name="microphone" size={50} color="white" style={Styles.icon} />
+      <TouchableOpacity style={Styles.icon}>
+        <Icon name="microphone" size={50} color="white" />
+      </TouchableOpacity>
     </View>
   );
 }
