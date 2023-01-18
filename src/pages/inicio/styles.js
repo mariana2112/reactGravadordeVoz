@@ -32,7 +32,6 @@ const Styles = StyleSheet.create({
 
   icon: {
     borderRadius: 100,
-    backgroundColor: "#95a5ba",
     height: 90,
     width: 90,
     alignSelf: "center",

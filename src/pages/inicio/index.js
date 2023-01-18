@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import Styles from "./styles";
 import Icon from "react-native-vector-icons/FontAwesome";
+import LinearGradient from "react-native-linear-gradient";
 import React, { useState } from "react";
 
 export default function AppInicio() {
@@ -16,9 +17,11 @@ export default function AppInicio() {
 
       <Text style={Styles.texto2}>Pronto para começar</Text>
 
-      <TouchableOpacity style={Styles.icon}>
-        <Icon name="microphone" size={50} color="white" />
-      </TouchableOpacity>
+      <LinearGradient style={Styles.icon} colors={["#BFCDE0", "#5D5D81"]}>
+        <TouchableOpacity>
+          <Icon name="microphone" size={50} color="white" />
+        </TouchableOpacity>
+      </LinearGradient>
     </View>
   );
 }
