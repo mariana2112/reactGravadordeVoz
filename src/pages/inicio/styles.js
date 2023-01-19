@@ -38,7 +38,7 @@ const Styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
-    bottom: 60,
+    bottom: 100,
   },
   texto2: {
     color: "grey",
