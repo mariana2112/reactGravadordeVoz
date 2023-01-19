@@ -47,21 +47,23 @@ export default function Tela2() {
         <View style={Styles.quadrado4} />
       </View>
 
-      <View style={Styles.quad1}>
-        <Text style={Styles.text1}>4,99</Text>
-        <Text style={Styles.t1}>Mensal</Text>
-      </View>
+      <View style={Styles.qp}>
+        <View style={Styles.quad1}>
+          <Text style={Styles.text1}>4,99</Text>
+          <Text style={Styles.t1}>Mensal</Text>
+        </View>
 
-      <View style={Styles.quad2}>
-        <Text style={Styles.text2}>15,99</Text>
-        <Text style={Styles.t2}>Anual</Text>
-      </View>
+        <View style={Styles.quad2}>
+          <Text style={Styles.text2}>15,99</Text>
+          <Text style={Styles.t2}>Anual</Text>
+        </View>
 
-      <View style={Styles.quad3}>
-        <Text style={Styles.text3}>39,99</Text>
-        <View style={Styles.linha} />
-        <Text style={Styles.text4}>29,99</Text>
-        <Text style={Styles.t3}>Vitalício</Text>
+        <View style={Styles.quad3}>
+          <Text style={Styles.text3}>39,99</Text>
+          <View style={Styles.linha} />
+          <Text style={Styles.text4}>29,99</Text>
+          <Text style={Styles.t3}>Vitalício</Text>
+        </View>
       </View>
 
       <View style={Styles.circulo}>

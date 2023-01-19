@@ -5,7 +5,8 @@ const Styles = StyleSheet.create({
     flex: 1,
   },
   img: {
-    flex: 0.5,
+    width: 377,
+    height: 370,
   },
   icomic: {
     borderRadius: 100,
@@ -15,13 +16,13 @@ const Styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     left: 50,
-    top: -85,
+    top: -99,
   },
   easy: {
     color: "#BFCDE0",
     fontSize: 36,
     fontWeight: "600",
-    top: -133,
+    top: -150,
   },
   recorder: {
     color: "#3B3355",
@@ -41,7 +42,7 @@ const Styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     height: 5,
-    top: -100,
+    top: -110,
   },
   quadrado1: {
     backgroundColor: "#D9D9D9",
@@ -70,14 +71,16 @@ const Styles = StyleSheet.create({
     height: 120,
     borderRadius: 8,
   },
-
+  qp: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    height: 5,
+    top: -110,
+  },
   quad1: {
-    boxSizing: "border-box",
-    position: "absolute",
     width: 97,
     height: 107,
-    left: 20,
-    top: 465,
+    top: 150,
     border: "1 solid",
     backgroundColor: "#fff",
     borderColor: "#5D5D81",
@@ -85,23 +88,18 @@ const Styles = StyleSheet.create({
     borderWidth: 1,
   },
   quad2: {
-    boxSizing: "border-box",
-    position: "absolute",
-    width: 97,
     height: 107,
-    left: 144,
-    top: 465,
+    width: 97,
+    top: 150,
     backgroundColor: "#fff",
     borderColor: "#5D5D81",
     borderRadius: 10,
     borderWidth: 1,
   },
   quad3: {
-    position: "absolute",
     width: 103,
     height: 113,
-    left: 268,
-    top: 465,
+    top: 150,
     backgroundColor: "#fff",
     borderColor: "#3B3355",
     borderRadius: 10,
@@ -179,7 +177,7 @@ const Styles = StyleSheet.create({
   circulo: {
     flexDirection: "row",
     justifyContent: "space-around",
-    top: 184,
+    top: 160,
   },
   c: {
     backgroundColor: "#fff",
@@ -199,7 +197,7 @@ const Styles = StyleSheet.create({
   cont: {
     width: 351,
     height: 53,
-    top: 200,
+    top: 170,
     alignSelf: "center",
     borderRadius: 6,
   },
@@ -224,7 +222,7 @@ const Styles = StyleSheet.create({
     textAlign: "justify",
   },
   linearGradient: {
-    height: 300,
+    height: 350,
     width: 520,
     opacity: 10,
     justifyContent: "center",
