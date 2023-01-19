@@ -63,11 +63,11 @@ export default function StackNavigation() {
             backgroundColor: "white",
           },
           headerTintColor: "black",
-          // headerLeft: () => (
-          //   <TouchableOpacity onPress={() => Navegar("AppInicio")}>
-          //     <AntDesign name="arrowleft" color="black" size={40}></AntDesign>
-          //   </TouchableOpacity>
-          // ),
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => Navegar("EasyRecorder")}>
+              <AntDesign name="arrowleft" color="black" size={30}></AntDesign>
+            </TouchableOpacity>
+          ),
         }}
       />
     </Stack.Navigator>

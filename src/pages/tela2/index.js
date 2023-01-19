@@ -23,43 +23,52 @@ export default function Tela2() {
         </TouchableOpacity>
         <LinearGradient
           colors={["transparent", "white"]}
-          start={{ x: 1, y: 0 }}
+          start={{ x: 1.1, y: 0 }}
           end={{ x: 1, y: 1 }}
           style={Styles.linearGradient}
         ></LinearGradient>
       </ImageBackground>
 
-      <LinearGradient style={Styles.icon} colors={["#BFCDE0", "#5D5D81"]}>
+      <LinearGradient style={Styles.icomic} colors={["#BFCDE0", "#5D5D81"]}>
         <TouchableOpacity>
           <FontAwesome name="microphone" size={27} color="white" />
         </TouchableOpacity>
       </LinearGradient>
-      <Text style={Styles.texto}>
-        Easy<Text style={Styles.texto1}>Recorder</Text>
-      </Text>
+      <View style={Styles.center}>
+        <Text style={Styles.easy}>
+          Easy<Text style={Styles.recorder}>Recorder</Text>
+        </Text>
+      </View>
 
-      <View style={Styles.quadrado1}></View>
-      <View style={Styles.quadrado2}></View>
-      <View style={Styles.quadrado3}></View>
-      <View style={Styles.quadrado4}></View>
+      <View style={Styles.qcinza}>
+        <View style={Styles.quadrado1} />
+        <View style={Styles.quadrado2} />
+        <View style={Styles.quadrado3} />
+        <View style={Styles.quadrado4} />
+      </View>
 
       <View style={Styles.quad1}>
         <Text style={Styles.text1}>4,99</Text>
         <Text style={Styles.t1}>Mensal</Text>
       </View>
-      <View style={Styles.c1}></View>
+
       <View style={Styles.quad2}>
         <Text style={Styles.text2}>15,99</Text>
         <Text style={Styles.t2}>Anual</Text>
       </View>
-      <View style={Styles.c2}></View>
+
       <View style={Styles.quad3}>
         <Text style={Styles.text3}>39,99</Text>
         <View style={Styles.linha} />
         <Text style={Styles.text4}>29,99</Text>
         <Text style={Styles.t3}>Vitalício</Text>
       </View>
-      <View style={Styles.c3}></View>
+
+      <View style={Styles.circulo}>
+        <View style={Styles.c}></View>
+        <View style={Styles.c}></View>
+        <View style={Styles.c3}></View>
+      </View>
 
       <LinearGradient style={Styles.cont} colors={["#BFCDE0", "#5D5D81"]}>
         <TouchableOpacity>
@@ -70,8 +79,8 @@ export default function Tela2() {
       <View>
         <Text style={Styles.textao}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          adminim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
