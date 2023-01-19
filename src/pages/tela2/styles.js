@@ -211,10 +211,11 @@ const Styles = StyleSheet.create({
   textao: {
     color: "black",
     alignSelf: "center",
-    right: 10,
-    left: 10,
-    lineHeight: 12,
-    top: 250,
+
+    lineHeight: 10,
+    margin: 3,
+    top: 180,
+    width: 310,
     justifyContent: "flex-end",
     fontFamily: "Sofia Sans",
     fontWeight: "300",
