@@ -18,13 +18,17 @@ export default function Tela2() {
   const Navegar = () => {
     navigation.goBack();
   };
+
   return (
     <View style={Styles.container}>
       <ImageBackground
         style={Styles.img}
         source={require("../../assets/images/woman.png")}
       >
-        <TouchableOpacity style={Styles.circle} onPress={() => Navegar()}>
+        <TouchableOpacity
+          style={Styles.circle}
+          onPress={() => Navegar("EasyRecorder")}
+        >
           <Feather name="x-circle" size={40} color="white" />
         </TouchableOpacity>
         <LinearGradient

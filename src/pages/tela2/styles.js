@@ -214,7 +214,7 @@ const Styles = StyleSheet.create({
     lineHeight: 10,
     margin: 3,
     top: 176,
-    width: 310,
+    width: 338,
     justifyContent: "flex-end",
     fontFamily: "Sofia Sans",
     fontWeight: "300",
