@@ -28,8 +28,8 @@ export default function Tela2() {
         </TouchableOpacity>
         <LinearGradient
           colors={["transparent", "white"]}
-          start={{ x: 1.1, y: 0.2 }}
-          end={{ x: 1, y: 1 }}
+          start={{ x: 1.2, y: 0 }}
+          end={{ x: 1, y: 1.1 }}
           style={Styles.linearGradient}
         ></LinearGradient>
       </ImageBackground>
@@ -87,7 +87,11 @@ export default function Tela2() {
         <Text style={Styles.textao}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
         </Text>
       </View>
     </View>

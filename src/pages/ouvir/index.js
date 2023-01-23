@@ -66,7 +66,7 @@ export default function Ouvir() {
           <Text style={Styles.texto}>00:45</Text>
         </View>
 
-        <View style={Styles.linha}>
+        <View style={Styles.alinhar}>
           <TouchableOpacity>
             <Ionicons name="ios-repeat-outline" size={35} color="white" />
           </TouchableOpacity>
@@ -84,7 +84,7 @@ export default function Ouvir() {
           </TouchableOpacity>
 
           <TouchableOpacity>
-            <Text style={Styles.once}>1x</Text>
+            <Text style={Styles.um}>1x</Text>
           </TouchableOpacity>
         </View>
       </LinearGradient>

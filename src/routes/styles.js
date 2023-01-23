@@ -12,5 +12,19 @@ const Styles = StyleSheet.create({
     fontWeight: "500",
     top: 5,
   },
+  cor: {
+    color: "#3B3355",
+  },
+  at: {
+    borderRadius: 10,
+    height: 25,
+    width: 33,
+  },
+  text: {
+    color: "white",
+    fontWeight: "500",
+    textAlign: "center",
+    top: 2,
+  },
 });
 export default Styles;

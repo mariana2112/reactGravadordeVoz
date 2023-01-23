@@ -52,7 +52,7 @@ const Styles = StyleSheet.create({
     marginRight: "5%",
   },
 
-  linha: {
+  alinhar: {
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
@@ -121,7 +121,7 @@ const Styles = StyleSheet.create({
     marginTop: "-3%",
   },
 
-  once: {
+  um: {
     fontSize: 20,
     fontWeight: "400",
     color: "#fff",

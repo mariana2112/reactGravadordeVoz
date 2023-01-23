@@ -5,8 +5,7 @@ const Styles = StyleSheet.create({
     flex: 1,
   },
   img: {
-    width: 377,
-    height: 370,
+    flex: 0.7,
   },
   icomic: {
     borderRadius: 100,
@@ -75,7 +74,7 @@ const Styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     height: 5,
-    top: -110,
+    top: -120,
   },
   quad1: {
     width: 97,
@@ -107,7 +106,6 @@ const Styles = StyleSheet.create({
   },
   text1: {
     color: "#5D5D81",
-    position: "absolute",
     fontFamily: "Sofia Sans",
     fontSize: 30,
     alignSelf: "center",
@@ -117,14 +115,12 @@ const Styles = StyleSheet.create({
   t1: {
     color: "#5D5D81",
     alignSelf: "center",
-    position: "absolute",
     fontSize: 25,
     fontWeight: "400",
-    top: 48,
+    top: 10,
   },
   text2: {
     color: "#5D5D81",
-    position: "absolute",
     fontFamily: "Sofia Sans",
     fontSize: 30,
     alignSelf: "center",
@@ -134,14 +130,12 @@ const Styles = StyleSheet.create({
   t2: {
     color: "#5D5D81",
     alignSelf: "center",
-    position: "absolute",
     fontSize: 25,
     fontWeight: "400",
-    top: 48,
+    top: 10,
   },
   text3: {
     color: "#918DA0",
-    position: "absolute",
     fontFamily: "Sofia Sans",
     fontSize: 20,
     alignSelf: "center",
@@ -149,35 +143,32 @@ const Styles = StyleSheet.create({
   },
   text4: {
     color: "#3B3355",
-    position: "absolute",
     fontFamily: "Sofia Sans",
     fontSize: 35,
     alignSelf: "center",
     fontWeight: "700",
-    top: 25,
+    top: -2,
   },
   t3: {
     color: "#3B3355",
     alignSelf: "center",
-    position: "absolute",
     fontFamily: "Sofia Sans",
     fontSize: 26,
     fontWeight: "500",
-    top: 65,
+    top: -10,
   },
   linha: {
-    position: "absolute",
     backgroundColor: "#918DA0",
     width: 54.06,
     height: 2,
     left: 22,
-    top: 20,
+    top: -6,
     transform: [{ rotateY: "1deg" }, { rotateZ: "15deg" }],
   },
   circulo: {
     flexDirection: "row",
     justifyContent: "space-around",
-    top: 160,
+    top: 150,
   },
   c: {
     backgroundColor: "#fff",
@@ -222,8 +213,8 @@ const Styles = StyleSheet.create({
     textAlign: "justify",
   },
   linearGradient: {
-    height: 350,
-    width: 520,
+    flex: 1,
+
     opacity: 10,
     justifyContent: "center",
     alignItems: "center",
