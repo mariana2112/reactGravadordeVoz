@@ -35,8 +35,8 @@ const Styles = StyleSheet.create({
   },
   circle: {
     flexDirection: "row-reverse",
-    top: 50,
-    right: 15,
+    marginTop: 50,
+    marginLeft: 10,
   },
   qcinza: {
     flexDirection: "row",

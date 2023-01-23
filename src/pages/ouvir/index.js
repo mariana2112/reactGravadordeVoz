@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Ouvir() {
   const navegation = useNavigation();
-  const inicio = () => {
+  const Navegar = () => {
     navegation.goBack();
   };
   return <View></View>;

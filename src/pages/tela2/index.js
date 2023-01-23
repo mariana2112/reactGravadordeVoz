@@ -1,10 +1,4 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ImageBackground,
-  ScrollView,
-} from "react-native";
+import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
 import Styles from "./styles";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Feather from "react-native-vector-icons/Feather";
@@ -16,6 +10,7 @@ import React from "react";
 export default function Tela2() {
   const navigation = useNavigation();
   const Navegar = () => {
+    console.log("click");
     navigation.goBack();
   };
 
@@ -33,7 +28,7 @@ export default function Tela2() {
         </TouchableOpacity>
         <LinearGradient
           colors={["transparent", "white"]}
-          start={{ x: 1.1, y: 0 }}
+          start={{ x: 1.1, y: 0.2 }}
           end={{ x: 1, y: 1 }}
           style={Styles.linearGradient}
         ></LinearGradient>
