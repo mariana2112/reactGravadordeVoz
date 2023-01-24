@@ -29,7 +29,7 @@ export default function Tela2() {
         <LinearGradient
           colors={["transparent", "white"]}
           start={{ x: 1.2, y: 0 }}
-          end={{ x: 1, y: 1.1 }}
+          end={{ x: 1.2, y: 1 }}
           style={Styles.linearGradient}
         ></LinearGradient>
       </ImageBackground>

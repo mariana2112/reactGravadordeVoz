@@ -12,14 +12,17 @@ export default function AppInicio() {
   };
   return (
     <View style={Styles.container}>
-      <TouchableOpacity style={Styles.touch}>
-        <Text style={Styles.gravar}>Gravar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={Styles.touch2}>
-        <Text style={Styles.ouvir} onPress={() => Gravar()}>
-          Ouvir
-        </Text>
-      </TouchableOpacity>
+      <View style={Styles.dois}>
+        <TouchableOpacity>
+          <Text style={Styles.gravar}>Gravar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={Styles.ouvir} onPress={() => Gravar()}>
+            Ouvir
+          </Text>
+        </TouchableOpacity>
+      </View>
+
       <Text style={Styles.timer}>00:00</Text>
 
       <Text style={Styles.texto2}>Pronto para começar</Text>

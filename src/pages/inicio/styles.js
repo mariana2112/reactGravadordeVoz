@@ -4,30 +4,25 @@ const Styles = StyleSheet.create({
     backgroundColor: "white",
     flex: 1,
   },
-  touch: {
-    marginRight: 90,
-    alignSelf: "center",
-  },
 
-  touch2: {
-    marginLeft: 90,
-    alignSelf: "center",
-  },
   gravar: {
-    top: 80,
     fontFamily: "Sofia Sans",
     fontSize: 17,
     color: "#3B3355",
     fontWeight: "500",
-    lineHeight: 20,
+    marginLeft: 76,
   },
   ouvir: {
-    top: 60,
     fontFamily: "Sofia Sans",
     fontSize: 17,
     color: "#3B3355",
     fontWeight: "500",
-    lineHeight: 20,
+    marginRight: 76,
+  },
+  dois: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    top: 82,
   },
 
   icon: {
@@ -37,8 +32,7 @@ const Styles = StyleSheet.create({
     alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
-    position: "absolute",
-    bottom: 100,
+    top: 420,
   },
   texto2: {
     color: "grey",
@@ -48,13 +42,11 @@ const Styles = StyleSheet.create({
     opacity: 0.6,
   },
   timer: {
-    position: "absolute",
-    bottom: 350,
+    top: 310,
     alignSelf: "center",
     fontFamily: "Sofia Sans",
     fontWeight: "500",
     fontSize: 50,
-    lineHeight: 100,
     color: "#3B3355",
   },
 });

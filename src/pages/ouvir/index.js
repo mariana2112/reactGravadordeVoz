@@ -3,12 +3,22 @@ import { useNavigation } from "@react-navigation/native";
 import Styles from "./styles";
 import { Item } from "./functions";
 import AntDesign from "react-native-vector-icons/AntDesign";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import Slider from "@react-native-community/slider";
+import { Slider } from "@miblanchard/react-native-slider";
 import LinearGradient from "react-native-linear-gradient";
-import React from "react";
+import React, { useState } from "react";
 
-export default function Ouvir() {
+export default function Audio() {
+  const [playerState, setPlayerSatate] = useState(false);
+  const navigation = useNavigation();
+  const navegar = (tela) => {
+    navigation.navigate(tela, {});
+  };
+  function toggleMusicPlay() {
+    setPlayerSatate(!playerState);
+  }
+
   const ARRAY = [
     {
       id: "1",
@@ -49,16 +59,12 @@ export default function Ouvir() {
         <View style={Styles.linha2}>
           <Text style={Styles.text}>00:00</Text>
           <Slider
-            containerStyle={{
-              flex: 1,
-              marginRight: 2,
-              marginLeft: 2,
-            }}
-            thumbTintColor="#FFFFFF"
+            containerStyle={{ flex: 1, marginRight: "6%", marginLeft: "6%" }}
+            thumbTintColor="white"
             value={2}
             minimumValue={1}
             maximumValue={5}
-            step={1}
+            step={2}
             trackClickable={true}
             maximumTrackTintColor="#e9f0ef"
             minimumTrackTintColor="white"
@@ -75,8 +81,12 @@ export default function Ouvir() {
             <AntDesign name="banckward" size={30} color="white" />
           </TouchableOpacity>
 
-          <TouchableOpacity>
-            <AntDesign name="play" size={69} color="white" />
+          <TouchableOpacity onPress={toggleMusicPlay}>
+            {playerState ? (
+              <AntDesign name="play" size={100} color={"white"} />
+            ) : (
+              <Ionicons name="stop-circle" size={120} color={"white"} />
+            )}
           </TouchableOpacity>
 
           <TouchableOpacity>

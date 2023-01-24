@@ -50,6 +50,7 @@ const Styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#fff",
     marginRight: "5%",
+    top: 8,
   },
 
   alinhar: {

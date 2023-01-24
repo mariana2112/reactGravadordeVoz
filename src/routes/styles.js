@@ -14,17 +14,52 @@ const Styles = StyleSheet.create({
   },
   cor: {
     color: "#3B3355",
+    marginLeft: -20,
+  },
+  cor2: {
+    color: "#3B3355",
+    fontSize: 20,
+    fontWeight: "700",
+  },
+  cor3: {
+    color: "#3B3355",
+    marginLeft: -15,
+  },
+  color: {
+    color: "#3B3355",
+    marginLeft: -13,
   },
   at: {
-    borderRadius: 10,
+    borderRadius: 5,
     height: 25,
-    width: 33,
+    width: 35,
   },
   text: {
     color: "white",
     fontWeight: "500",
     textAlign: "center",
     top: 2,
+  },
+  easy: {
+    color: "#BFCDE0",
+    fontSize: 24,
+    fontWeight: "500",
+  },
+  recorder: {
+    color: "#3B3355",
+  },
+  easy2: {
+    color: "#BFCDE0",
+    fontSize: 27,
+    fontWeight: "500",
+    textAlign: "center",
+    marginLeft: 30,
+  },
+  recorder2: {
+    color: "#3B3355",
+  },
+  gear: {
+    marginLeft: 10,
   },
 });
 export default Styles;

@@ -6,6 +6,8 @@ const Styles = StyleSheet.create({
   },
   img: {
     flex: 0.7,
+    width: 378,
+    height: 360,
   },
   icomic: {
     borderRadius: 100,
@@ -186,9 +188,9 @@ const Styles = StyleSheet.create({
     borderRadius: 10,
   },
   cont: {
+    justifyContent: "center",
     width: 351,
-    height: 53,
-    top: 170,
+    top: 165,
     alignSelf: "center",
     borderRadius: 6,
   },
@@ -203,21 +205,19 @@ const Styles = StyleSheet.create({
     color: "black",
     alignSelf: "center",
     lineHeight: 10,
-    margin: 3,
-    top: 176,
-    width: 338,
-    justifyContent: "flex-end",
+    bottom: -170,
+    width: 351,
+    justifyContent: "center",
     fontFamily: "Sofia Sans",
     fontWeight: "300",
     fontSize: 10,
     textAlign: "justify",
   },
   linearGradient: {
-    flex: 1,
-
+    flex: 3,
     opacity: 10,
-    justifyContent: "center",
-    alignItems: "center",
+    width: 378,
+    height: 360,
   },
 });
 export default Styles;
