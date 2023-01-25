@@ -1,23 +1,14 @@
 import { View, Text, TouchableOpacity, FlatList } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import Styles from "./styles";
 import { Item } from "./functions";
 import AntDesign from "react-native-vector-icons/AntDesign";
-import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { Slider } from "@miblanchard/react-native-slider";
 import LinearGradient from "react-native-linear-gradient";
 import React, { useState } from "react";
 
-export default function Audio() {
-  const [playerState, setPlayerSatate] = useState(false);
-  const navigation = useNavigation();
-  const navegar = (tela) => {
-    navigation.navigate(tela, {});
-  };
-  function toggleMusicPlay() {
-    setPlayerSatate(!playerState);
-  }
+export default function Ouvir() {
+  const [playerState, setPlayerState] = useState(false);
 
   const ARRAY = [
     {
@@ -31,22 +22,16 @@ export default function Audio() {
     },
   ];
 
+  function toggleMusicPlay() {
+    setPlayerState(!playerState);
+  }
+
   function renderItem({ item }) {
     return <Item data={item} />;
   }
 
   return (
     <View style={Styles.container}>
-      <View style={Styles.header}>
-        <TouchableOpacity>
-          <Text style={Styles.letra2}>Gravar</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-          <Text style={Styles.letra}>Ouvir</Text>
-        </TouchableOpacity>
-      </View>
-
       <View style={Styles.body}>
         <FlatList
           data={ARRAY}

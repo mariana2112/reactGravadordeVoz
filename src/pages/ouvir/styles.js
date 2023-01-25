@@ -2,12 +2,12 @@ import { StyleSheet } from "react-native";
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red",
+    backgroundColor: "white",
   },
 
   header: {
     flex: 0.5,
-    backgroundColor: "#fff",
+    backgroundColor: "white",
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
@@ -27,29 +27,28 @@ const Styles = StyleSheet.create({
   },
 
   body: {
-    flex: 5,
-    backgroundColor: "#fff",
+    flex: 6,
   },
 
   bottom: {
-    flex: 2,
+    flex: 2.5,
   },
 
   text: {
-    color: "#fff",
+    color: "white",
     fontSize: 12,
     borderWidth: 1,
-    borderColor: "#fff",
+    borderColor: "white",
     marginLeft: "5%",
     marginTop: "4%",
   },
 
   texto: {
-    color: "#fff",
+    color: "white",
     fontSize: 12,
     borderWidth: 1,
-    borderColor: "#fff",
-    marginRight: "5%",
+    borderColor: "white",
+    marginRight: 18,
     top: 8,
   },
 
@@ -67,9 +66,9 @@ const Styles = StyleSheet.create({
   },
 
   linha3: {
-    marginLeft: "6%",
-    marginRight: "10%",
-    marginTop: "6%",
+    marginLeft: 20,
+    marginRight: 10,
+    marginTop: 1,
   },
 
   linha4: {
@@ -78,27 +77,27 @@ const Styles = StyleSheet.create({
 
   linha5: {
     flexDirection: "row-reverse",
-    marginRight: "44%",
+    marginRight: 148,
   },
 
   linhav: {
     backgroundColor: "#BFCDE0",
     height: 1,
-    marginTop: "2%",
-    width: "108%",
+    marginTop: -1,
+    width: 335,
   },
 
   title: {
     fontSize: 20,
     fontWeight: "500",
     lineHeight: 24,
-    color: "#000000",
+    color: "black",
   },
 
   subtext: {
     fontSize: 10,
     fontWeight: "400",
-    color: "#000000",
+    color: "black",
     lineHeight: 12,
     marginRight: 10,
   },
@@ -106,7 +105,7 @@ const Styles = StyleSheet.create({
   time: {
     fontSize: 12,
     fontWeight: "400",
-    color: "#000000",
+    color: "black",
     marginTop: "-3%",
   },
 
@@ -119,13 +118,13 @@ const Styles = StyleSheet.create({
     width: 40,
     textAlign: "center",
     marginRight: 10,
-    marginTop: "-3%",
+    top: -11,
   },
 
   um: {
     fontSize: 20,
     fontWeight: "400",
-    color: "#fff",
+    color: "white",
   },
 });
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
 import Styles from "./styles";
-import { useNavigation } from "@react-navigation/native";
 import Feather from "react-native-vector-icons/Feather";
 import Entypo from "react-native-vector-icons/Entypo";
 
