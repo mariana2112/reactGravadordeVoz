@@ -67,12 +67,20 @@ const Styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  centeredView3: {
+    flex: 1,
+    width: 330,
+    height: 310,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   centeredView2: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "rgba(0,0,0,0.5)",
   },
+
   modalView: {
     backgroundColor: "white",
     borderRadius: 5,
@@ -86,7 +94,7 @@ const Styles = StyleSheet.create({
     width: 160,
     height: 42,
   },
-  textStyle: {
+  textStyle1: {
     color: "white",
     textAlign: "center",
     fontWeight: "700",
@@ -143,5 +151,44 @@ const Styles = StyleSheet.create({
     backgroundColor: "#EFEFEF",
   },
   dropdown1RowTxtStyle: { color: "#444", textAlign: "left" },
+  corLinha: {
+    backgroundColor: "#fff",
+    borderBottomColor: "transparent",
+  },
+
+  corTextLinha: {
+    color: "#000000",
+    textAlign: "left",
+    marginLeft: "4%",
+    fontSize: 16,
+    fontWeight: "400",
+  },
+  textStyle: {
+    textAlign: "center",
+    fontSize: 23,
+    color: "#000",
+    marginTop: 15,
+  },
+  buttonStyle: {
+    justifyContent: "center",
+    flexDirection: "row",
+    marginTop: 30,
+    padding: 15,
+    backgroundColor: "#8ad24e",
+  },
+  buttonTextStyle: {
+    color: "#fff",
+    textAlign: "center",
+  },
+  ratingBarStyle: {
+    justifyContent: "center",
+    flexDirection: "row",
+    marginTop: 30,
+  },
+  starImageStyle: {
+    width: 40,
+    height: 40,
+    resizeMode: "cover",
+  },
 });
 export default Styles;

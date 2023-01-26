@@ -19,6 +19,7 @@
     "react-native": "0.69.7",
     "react-native-gesture-handler": "^2.9.0",
     "react-native-image-gradient": "^2.2.5",
+    "react-native-in-app-review": "^4.2.1",
     "react-native-linear-gradient": "^2.6.2",
     "react-native-reanimated": "^2.14.4",
     "react-native-safe-area-context": "^4.4.1",
