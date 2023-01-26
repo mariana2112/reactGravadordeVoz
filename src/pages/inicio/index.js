@@ -11,6 +11,7 @@ import Styles from "./styles";
 import Ouvir from "../ouvir";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Entypo from "react-native-vector-icons/Entypo";
+import Feather from "react-native-vector-icons/Feather";
 import LinearGradient from "react-native-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 import SelectDropdown from "react-native-select-dropdown";
@@ -49,8 +50,8 @@ export default function AppInicio() {
                 style={Styles.starImageStyle}
                 source={
                   item <= defaultRating
-                    ? require("../../assets/images/starp.png")
-                    : require("../../assets/images/star.png")
+                    ? require("../../assets/images/star.png")
+                    : require("../../assets/images/starvaziaa.png")
                 }
               />
             </TouchableOpacity>
@@ -168,6 +169,22 @@ export default function AppInicio() {
             >
               <View style={Styles.centeredView3}>
                 <View style={Styles.modalView}>
+                  <TouchableOpacity
+                    style={Styles.circle}
+                    onPress={() => setModalVisible(!modalVisible)}
+                  >
+                    <LinearGradient
+                      style={Styles.btcircle}
+                      colors={["#BFCDE0", "#b0bdcf", "#96a2b3", "#697687"]}
+                    >
+                      <Feather
+                        style={Styles.xicon}
+                        name="x"
+                        size={30}
+                        color="white"
+                      />
+                    </LinearGradient>
+                  </TouchableOpacity>
                   <Text style={Styles.modalText}>
                     Parabéns! Você gravou seu primeiro áudio!
                   </Text>

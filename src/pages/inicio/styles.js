@@ -117,6 +117,8 @@ const Styles = StyleSheet.create({
   textoAvalie: {
     color: "black",
     textAlign: "center",
+    fontWeight: "400",
+    fontSize: 15,
   },
   salvar: {
     width: 160,
@@ -130,6 +132,7 @@ const Styles = StyleSheet.create({
     borderRadius: 6,
     marginRight: 10,
   },
+
   cancelar: {
     width: 92,
     height: 42,
@@ -183,6 +186,23 @@ const Styles = StyleSheet.create({
     width: 40,
     height: 40,
     resizeMode: "cover",
+    color: "red",
+  },
+  circle: {
+    flexDirection: "row-reverse",
+    left: 150,
+    bottom: 35,
+  },
+  btcircle: {
+    width: 35,
+    height: 35,
+    borderRadius: 20,
+  },
+  xicon: {
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    top: 3,
   },
 });
 export default Styles;
