@@ -12,6 +12,7 @@ import Ouvir from "../ouvir";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Entypo from "react-native-vector-icons/Entypo";
 import Feather from "react-native-vector-icons/Feather";
+import AntDesign from "react-native-vector-icons/AntDesign";
 import LinearGradient from "react-native-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 import SelectDropdown from "react-native-select-dropdown";
@@ -46,13 +47,10 @@ export default function AppInicio() {
               key={item}
               onPress={() => setDefaultRating(item)}
             >
-              <ImageBackground
-                style={Styles.starImageStyle}
-                source={
-                  item <= defaultRating
-                    ? require("../../assets/images/star.png")
-                    : require("../../assets/images/starvaziaa.png")
-                }
+              <AntDesign
+                name={item <= defaultRating ? "star" : "staro"}
+                size={40}
+                color="#BFCDE0"
               />
             </TouchableOpacity>
           );
