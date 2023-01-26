@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import com.reactnativecommunity.slider.ReactSliderPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
+// react-native-in-app-review
+import com.ibits.react_native_in_app_review.AppReviewPackage;
 // react-native-linear-gradient
 import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-reanimated
@@ -72,6 +74,7 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new ReactSliderPackage(),
       new RNGestureHandlerPackage(),
+      new AppReviewPackage(),
       new LinearGradientPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),

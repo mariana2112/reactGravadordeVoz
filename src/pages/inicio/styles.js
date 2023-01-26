@@ -71,6 +71,7 @@ const Styles = StyleSheet.create({
     flex: 1,
     width: 330,
     height: 310,
+    alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -113,8 +114,18 @@ const Styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 20,
   },
+  textoAvalie: {
+    color: "black",
+    textAlign: "center",
+  },
   salvar: {
     width: 160,
+    height: 42,
+    borderRadius: 6,
+    marginRight: 10,
+  },
+  avaliar: {
+    width: 260,
     height: 42,
     borderRadius: 6,
     marginRight: 10,
@@ -162,23 +173,6 @@ const Styles = StyleSheet.create({
     marginLeft: "4%",
     fontSize: 16,
     fontWeight: "400",
-  },
-  textStyle: {
-    textAlign: "center",
-    fontSize: 23,
-    color: "#000",
-    marginTop: 15,
-  },
-  buttonStyle: {
-    justifyContent: "center",
-    flexDirection: "row",
-    marginTop: 30,
-    padding: 15,
-    backgroundColor: "#8ad24e",
-  },
-  buttonTextStyle: {
-    color: "#fff",
-    textAlign: "center",
   },
   ratingBarStyle: {
     justifyContent: "center",

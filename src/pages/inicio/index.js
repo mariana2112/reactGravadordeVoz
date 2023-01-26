@@ -5,6 +5,7 @@ import {
   Alert,
   Modal,
   TextInput,
+  ImageBackground,
 } from "react-native";
 import Styles from "./styles";
 import Ouvir from "../ouvir";
@@ -44,12 +45,13 @@ export default function AppInicio() {
               key={item}
               onPress={() => setDefaultRating(item)}
             >
-              <Entypo
-                name="star-outlined"
-                size={50}
-                color="red"
-                style={Styles.starIcon}
-                source={item <= defaultRating ? require : require}
+              <ImageBackground
+                style={Styles.starImageStyle}
+                source={
+                  item <= defaultRating
+                    ? require("../../assets/images/starp.png")
+                    : require("../../assets/images/star.png")
+                }
               />
             </TouchableOpacity>
           );
@@ -68,19 +70,6 @@ export default function AppInicio() {
           <Text style={gravar ? Styles.text3 : Styles.text2}>Ouvir</Text>
         </TouchableOpacity>
       </View>
-
-      <Text style={Styles.textStyle}>Classifique a sua experiência</Text>
-      <RatingBar />
-      <Text style={Styles.textStyle}>
-        {defaultRating} / {Math.max.apply(null, maxRating)}
-      </Text>
-      <TouchableOpacity
-        activeOpacity={0.7}
-        style={Styles.buttonStyle}
-        onPress={() => alert(defaultRating)}
-      >
-        <Text style={Styles.buttonTextStyle}>Obter Valor Selecionado</Text>
-      </TouchableOpacity>
 
       {!gravar ? (
         <Ouvir />
@@ -183,60 +172,23 @@ export default function AppInicio() {
                     Parabéns! Você gravou seu primeiro áudio!
                   </Text>
                   <View>
-                    <TextInput
-                      style={Styles.input}
-                      maxLength={50}
-                      placeholder="Nome"
-                    ></TextInput>
-
-                    <SelectDropdown
-                      data={countries}
-                      onSelect={(selectedItem, index) => {
-                        console.log(selectedItem, index);
-                      }}
-                      defaultButtonText={"Tag"}
-                      buttonTextAfterSelection={(selectedItem, index) => {
-                        return selectedItem;
-                      }}
-                      rowTextForSelection={(item, index) => {
-                        return item;
-                      }}
-                      buttonStyle={Styles.dropdown1BtnStyle}
-                      buttonTextStyle={Styles.dropdown1BtnTxtStyle}
-                      renderDropdownIcon={(isOpened) => {
-                        return (
-                          <Entypo
-                            name={isOpened ? "chevron-up" : "chevron-down"}
-                            color={"#3B3355"}
-                            size={18}
-                          />
-                        );
-                      }}
-                      dropdownIconPosition={"right"}
-                      dropdownStyle={Styles.colorClick}
-                      rowStyle={Styles.corLinha}
-                      rowTextStyle={Styles.corTextLinha}
-                    />
-
+                    <Text style={Styles.textoAvalie}>
+                      Nos avalie com 5 estrelas se estiver gostando do
+                      aplicativo!
+                    </Text>
+                    <RatingBar />
+                    <Text>
+                      {defaultRating} / {Math.max.apply(null, maxRating)}
+                    </Text>
                     <View style={Styles.alinhar}>
                       <TouchableOpacity
                         onPress={() => setModalVisible(!modalVisible)}
                       >
                         <LinearGradient
-                          style={Styles.salvar}
+                          style={Styles.avaliar}
                           colors={["#BFCDE0", "#b0bdcf", "#96a2b3", "#697687"]}
                         >
-                          <Text style={Styles.textStyle1}>Salvar</Text>
-                        </LinearGradient>
-                      </TouchableOpacity>
-                      <TouchableOpacity
-                        onPress={() => setModalVisible(!modalVisible)}
-                      >
-                        <LinearGradient
-                          style={Styles.cancelar}
-                          colors={["#5D5D81", "#3B3355"]}
-                        >
-                          <Text style={Styles.textStyle1}>Cancelar</Text>
+                          <Text style={Styles.textStyle1}>Avaliar</Text>
                         </LinearGradient>
                       </TouchableOpacity>
                     </View>
