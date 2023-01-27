@@ -16,7 +16,6 @@ import LinearGradient from "react-native-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 import SelectDropdown from "react-native-select-dropdown";
 import InAppReview from "react-native-in-app-review";
-import AudioRecorderPlayer from "react-native-audio-recorder-player";
 import React, { useState } from "react";
 
 export default function AppInicio() {

@@ -76,7 +76,6 @@ import com.android.build.OutputFile
  *   extraPackagerArgs: []
  * ]
  */
-   compile project(':react-native-audio-recorder-player') //aagr
 
 project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
