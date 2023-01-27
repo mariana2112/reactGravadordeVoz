@@ -5,7 +5,6 @@ import {
   Alert,
   Modal,
   TextInput,
-  ImageBackground,
 } from "react-native";
 import Styles from "./styles";
 import Ouvir from "../ouvir";
@@ -17,6 +16,7 @@ import LinearGradient from "react-native-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 import SelectDropdown from "react-native-select-dropdown";
 import InAppReview from "react-native-in-app-review";
+import AudioRecorderPlayer from "react-native-audio-recorder-player";
 import React, { useState } from "react";
 
 export default function AppInicio() {
@@ -197,7 +197,15 @@ export default function AppInicio() {
                     </Text>
                     <View style={Styles.alinhar}>
                       <TouchableOpacity
-                        onPress={() => setModalVisible(!modalVisible)}
+                        onPress={() => {
+                          if (defaultRating >= 4) {
+                            InAppReview.RequestInAppReview();
+                            console.log(defaultRating);
+                          } else {
+                            setModalVisible(!modalVisible);
+                            Alert.alert("Obrigada pela avaliação!");
+                          }
+                        }}
                       >
                         <LinearGradient
                           style={Styles.avaliar}
