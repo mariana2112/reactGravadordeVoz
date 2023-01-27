@@ -4,7 +4,7 @@
             "outputFile": "/Users/user/Documents/GitHub/reactGravadordeVoz/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/user/.gradle/caches/transforms-3/a5da391e889210c4d2ba1ae6744f6033/transformed/appcompat-1.4.1/res/values-v24/values-v24.xml",
+                    "source": "/Users/user/.gradle/caches/transforms-3/080fc22e5bfa93f58e57a40b07c1bc52/transformed/appcompat-1.4.1/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

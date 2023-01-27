@@ -4,7 +4,7 @@
             "outputFile": "/Users/user/Documents/GitHub/reactGravadordeVoz/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-port-v13/values-w480dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/user/.gradle/caches/transforms-3/19f285c5360101e74a65ffd2dd8f0c51/transformed/material-1.1.0/res/values-w480dp-port-v13/values-w480dp-port-v13.xml",
+                    "source": "/Users/user/.gradle/caches/transforms-3/1078ff708f6dc1b9827966619a73d660/transformed/material-1.1.0/res/values-w480dp-port-v13/values-w480dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
