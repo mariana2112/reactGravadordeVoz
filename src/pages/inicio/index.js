@@ -20,6 +20,7 @@ import SelectDropdown from "react-native-select-dropdown";
 import InAppReview from "react-native-in-app-review";
 import React, { useState } from "react";
 import AudioRecorderPlayer from "react-native-audio-recorder-player";
+import RNFS from "react-native-fs";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
@@ -83,7 +84,25 @@ export default function AppInicio() {
       recordSecs: 0,
       recordTime: tempo.recordTime,
     });
-    console.log(result);
+
+    // const shareOptions = {
+    //   title: "Share file",
+    //   failOnCancel: false,
+    //   saveToFiles: true,
+    //   url: result,
+    // };
+
+    // await Share.open(shareOptions);
+
+    // await RNFS.copyFile(result, RNFS.DocumentDirectoryPath + "/test.mp4")
+    //   .then((success) => {
+    //     console.log("file moved!", success);
+    //   })
+    //   .catch((err) => {
+    //     console.log("Error: " + err.message);
+    //   });
+
+    // console.log("teste", result);
   }
 
   const [defaultRating, setDefaultRating] = useState(2);

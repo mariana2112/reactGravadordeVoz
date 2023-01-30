@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import com.reactnativecommunity.slider.ReactSliderPackage;
 // react-native-audio-recorder-player
 import com.dooboolab.audiorecorderplayer.RNAudioRecorderPlayerPackage;
+// react-native-fs
+import com.rnfs.RNFSPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 // react-native-in-app-review
@@ -78,6 +80,7 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new ReactSliderPackage(),
       new RNAudioRecorderPlayerPackage(),
+      new RNFSPackage(),
       new RNGestureHandlerPackage(),
       new AppReviewPackage(),
       new LinearGradientPackage(),

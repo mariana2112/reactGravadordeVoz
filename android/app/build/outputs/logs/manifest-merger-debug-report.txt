@@ -8,6 +8,7 @@ MERGED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/user/.gradle/caches/transforms-3/bae35ff68c27edf412f3700024be0ffe/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] /Users/user/.gradle/caches/transforms-3/38713ea8ea0164fee0c4e5131f803c8c/transformed/jetified-flipper-network-plugin-0.125.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /Users/user/.gradle/caches/transforms-3/58cf1986ccac5a217ea94d89b1b215af/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:8:1-15:12
+MERGED from [:react-native-fs] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-community_slider] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/@react-native-community/slider/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-audio-recorder-player] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-audio-recorder-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-gesture-handler] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
@@ -115,6 +116,8 @@ MERGED from [:react-native-audio-recorder-player] /Users/user/Documents/GitHub/r
 		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:6:22-68
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:7:5-81
+MERGED from [:react-native-fs] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+MERGED from [:react-native-fs] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
 MERGED from [:react-native-audio-recorder-player] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-audio-recorder-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-81
 MERGED from [:react-native-audio-recorder-player] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-audio-recorder-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-81
 	android:name
@@ -211,6 +214,8 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] /Users/user/.g
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] /Users/user/.gradle/caches/transforms-3/38713ea8ea0164fee0c4e5131f803c8c/transformed/jetified-flipper-network-plugin-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /Users/user/.gradle/caches/transforms-3/58cf1986ccac5a217ea94d89b1b215af/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /Users/user/.gradle/caches/transforms-3/58cf1986ccac5a217ea94d89b1b215af/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-fs] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-fs] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_slider] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/@react-native-community/slider/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_slider] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/@react-native-community/slider/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-audio-recorder-player] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-audio-recorder-player/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
