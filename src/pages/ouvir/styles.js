@@ -17,6 +17,7 @@ const Styles = StyleSheet.create({
     color: "#3B3355",
     fontWeight: "500",
     fontSize: 17,
+    fontFamily: "SofiaSans-VariableFont",
   },
 
   letra2: {
@@ -24,6 +25,7 @@ const Styles = StyleSheet.create({
     fontSize: 17,
     color: "#3B3355",
     opacity: 0.5,
+    fontFamily: "SofiaSans-VariableFont",
   },
 
   body: {
@@ -41,6 +43,7 @@ const Styles = StyleSheet.create({
     borderColor: "white",
     marginLeft: "5%",
     marginTop: "4%",
+    fontFamily: "SofiaSans-VariableFont",
   },
 
   texto: {
@@ -50,6 +53,7 @@ const Styles = StyleSheet.create({
     borderColor: "white",
     marginRight: 18,
     top: 8,
+    fontFamily: "SofiaSans-VariableFont",
   },
 
   alinhar: {
@@ -92,6 +96,7 @@ const Styles = StyleSheet.create({
     fontWeight: "500",
     lineHeight: 24,
     color: "black",
+    fontFamily: "SofiaSans-VariableFont",
   },
 
   subtext: {
@@ -100,6 +105,7 @@ const Styles = StyleSheet.create({
     color: "black",
     lineHeight: 12,
     marginRight: 10,
+    fontFamily: "SofiaSans-VariableFont",
   },
 
   time: {
@@ -107,6 +113,7 @@ const Styles = StyleSheet.create({
     fontWeight: "400",
     color: "black",
     marginTop: "-3%",
+    fontFamily: "SofiaSans-VariableFont",
   },
 
   tag: {
@@ -119,12 +126,14 @@ const Styles = StyleSheet.create({
     textAlign: "center",
     marginRight: 10,
     top: -11,
+    fontFamily: "SofiaSans-VariableFont",
   },
 
   um: {
     fontSize: 20,
     fontWeight: "400",
     color: "white",
+    fontFamily: "SofiaSans-VariableFont",
   },
 });
 

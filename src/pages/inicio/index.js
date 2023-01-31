@@ -33,6 +33,7 @@ export default function AppInicio() {
   const [defaultRating, setDefaultRating] = useState(2);
   const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
   const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisibleTwo, setModalVisibleTwo] = useState(false);
   const [gravar, setGravar] = useState(true);
   const navegation = useNavigation();
   const [frase, setFrase] = useState({
@@ -95,13 +96,13 @@ export default function AppInicio() {
       recordTime: tempo.recordTime,
     });
 
-    const shareOptions = {
-      title: "Share file",
-      failOnCancel: false,
-      saveToFiles: tr,
-    };
+    // const shareOptions = {
+    //   title: "Share file",
+    //   failOnCancel: false,
+    //   saveToFiles: true,
+    // };
 
-    await Share.open(shareOptions);
+    // await Share.open(shareOptions);
 
     await RNFS.copyFile(result, RNFS.DocumentDirectoryPath + "/test.mp4")
       .then((success) => {
@@ -112,6 +113,8 @@ export default function AppInicio() {
       });
 
     console.log("teste", result);
+
+    setModalVisible(true);
   }
 
   function toggleTela(teste) {
@@ -214,12 +217,16 @@ export default function AppInicio() {
                       <TouchableOpacity
                         onPress={() => setModalVisible(!modalVisible)}
                       >
-                        <LinearGradient
-                          style={Styles.salvar}
-                          colors={["#BFCDE0", "#b0bdcf", "#96a2b3", "#697687"]}
+                        <TouchableOpacity
+                          onPress={() => setModalVisibleTwo(!modalVisibleTwo)}
                         >
-                          <Text style={Styles.textStyle1}>Salvar</Text>
-                        </LinearGradient>
+                          <LinearGradient
+                            style={Styles.salvar}
+                            colors={["#BFCDE0", "#5D5D81"]}
+                          >
+                            <Text style={Styles.textStyle1}>Salvar</Text>
+                          </LinearGradient>
+                        </TouchableOpacity>
                       </TouchableOpacity>
                       <TouchableOpacity
                         onPress={() => setModalVisible(!modalVisible)}
@@ -242,17 +249,16 @@ export default function AppInicio() {
             <Modal
               animationType="slide"
               transparent={true}
-              visible={modalVisible}
+              visible={modalVisibleTwo}
               onRequestClose={() => {
-                Alert.alert("Modal has been closed.");
-                setModalVisible(!modalVisible);
+                setModalVisible(!modalVisibleTwo);
               }}
             >
               <View style={Styles.centeredView3}>
                 <View style={Styles.modalView}>
                   <TouchableOpacity
                     style={Styles.circle}
-                    onPress={() => setModalVisible(!modalVisible)}
+                    onPress={() => setModalVisibleTwo(!modalVisibleTwo)}
                   >
                     <LinearGradient
                       style={Styles.btcircle}
@@ -285,7 +291,7 @@ export default function AppInicio() {
                             InAppReview.RequestInAppReview();
                             console.log(defaultRating);
                           } else {
-                            setModalVisible(!modalVisible);
+                            setModalVisibleTwo(!modalVisibleTwo);
                             Alert.alert("Obrigada pela avaliação!");
                           }
                         }}

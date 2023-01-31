@@ -6,13 +6,13 @@ const Styles = StyleSheet.create({
   },
 
   gravar: {
-    fontFamily: "Sofia Sans",
+    fontFamily: "SofiaSans-VariableFont",
     fontSize: 17,
     color: "#3B3355",
     fontWeight: "500",
   },
   ouvir: {
-    fontFamily: "Sofia Sans",
+    fontFamily: "SofiaSans-VariableFont",
     fontSize: 17,
     color: "#3B3355",
     fontWeight: "500",
@@ -38,12 +38,14 @@ const Styles = StyleSheet.create({
     textAlign: "center",
     color: "#3B3355",
     opacity: 0.5,
+    fontFamily: "SofiaSans-VariableFont",
   },
   timer: {
     textAlign: "center",
     fontWeight: "400",
     fontSize: 50,
     color: "#3B3355",
+    fontFamily: "SofiaSans-VariableFont",
   },
   aa: {
     flex: 2,
@@ -101,11 +103,13 @@ const Styles = StyleSheet.create({
     fontWeight: "700",
     fontSize: 20,
     top: 5,
+    fontFamily: "SofiaSans-VariableFont",
   },
   textStyle2: {
     color: "white",
     fontWeight: "bold",
     textAlign: "center",
+    fontFamily: "SofiaSans-VariableFont",
   },
   modalText: {
     textAlign: "center",
@@ -113,12 +117,14 @@ const Styles = StyleSheet.create({
     fontWeight: "700",
     fontSize: 20,
     marginBottom: 20,
+    fontFamily: "SofiaSans-VariableFont",
   },
   textoAvalie: {
     color: "black",
     textAlign: "center",
     fontWeight: "400",
     fontSize: 15,
+    fontFamily: "SofiaSans-VariableFont",
   },
   salvar: {
     width: 160,

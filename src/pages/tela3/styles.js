@@ -8,6 +8,7 @@ const Styles = StyleSheet.create({
     fontSize: 20,
     color: "#BFCDE0",
     fontWeight: "700",
+    fontFamily: "SofiaSans-VariableFont",
   },
   margin: {
     margin: 20,
@@ -20,11 +21,13 @@ const Styles = StyleSheet.create({
     color: "#3B3355",
     fontWeight: "500",
     marginTop: 25,
+    fontFamily: "SofiaSans-VariableFont",
   },
   text3: {
     fontSize: 12,
     color: "#3B3355",
     fontWeight: "300",
+    fontFamily: "SofiaSans-VariableFont",
   },
   tt: {
     top: 20,

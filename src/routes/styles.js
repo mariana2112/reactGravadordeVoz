@@ -11,6 +11,7 @@ const Styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "500",
     top: 5,
+    fontFamily: "SofiaSans-VariableFont",
   },
   cor: {
     color: "#3B3355",
@@ -20,14 +21,17 @@ const Styles = StyleSheet.create({
     color: "#3B3355",
     fontSize: 20,
     fontWeight: "700",
+    fontFamily: "SofiaSans-VariableFont",
   },
   cor3: {
     color: "#3B3355",
     marginLeft: -15,
+    fontFamily: "SofiaSans-VariableFont",
   },
   color: {
     color: "#3B3355",
     marginLeft: -13,
+    fontFamily: "SofiaSans-VariableFont",
   },
   at: {
     borderRadius: 5,
@@ -44,6 +48,7 @@ const Styles = StyleSheet.create({
     color: "#BFCDE0",
     fontSize: 24,
     fontWeight: "500",
+    fontFamily: "SofiaSans-VariableFont",
   },
   recorder: {
     color: "#3B3355",
