@@ -21,10 +21,20 @@ import InAppReview from "react-native-in-app-review";
 import React, { useState } from "react";
 import AudioRecorderPlayer from "react-native-audio-recorder-player";
 import RNFS from "react-native-fs";
+import Share from "react-native-share";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
 export default function AppInicio() {
+  const Navegar = (tela) => {
+    navegation.navigate(tela, {});
+  };
+  const countries = ["Sem Tag", "Estudo", "Faculdade", "Minhas Músicas"];
+  const [defaultRating, setDefaultRating] = useState(2);
+  const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [gravar, setGravar] = useState(true);
+  const navegation = useNavigation();
   const [frase, setFrase] = useState({
     inicio: "Pronto para começar",
     grav: "Gravando",
@@ -85,38 +95,24 @@ export default function AppInicio() {
       recordTime: tempo.recordTime,
     });
 
-    // const shareOptions = {
-    //   title: "Share file",
-    //   failOnCancel: false,
-    //   saveToFiles: true,
-    //   url: result,
-    // };
+    const shareOptions = {
+      title: "Share file",
+      failOnCancel: false,
+      saveToFiles: tr,
+    };
 
-    // await Share.open(shareOptions);
+    await Share.open(shareOptions);
 
-    // await RNFS.copyFile(result, RNFS.DocumentDirectoryPath + "/test.mp4")
-    //   .then((success) => {
-    //     console.log("file moved!", success);
-    //   })
-    //   .catch((err) => {
-    //     console.log("Error: " + err.message);
-    //   });
+    await RNFS.copyFile(result, RNFS.DocumentDirectoryPath + "/test.mp4")
+      .then((success) => {
+        console.log("file moved!", success);
+      })
+      .catch((err) => {
+        console.log("Error: " + err.message);
+      });
 
-    // console.log("teste", result);
+    console.log("teste", result);
   }
-
-  const [defaultRating, setDefaultRating] = useState(2);
-  const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
-
-  const [modalVisible, setModalVisible] = useState(false);
-
-  const [gravar, setGravar] = useState(true);
-  const navegation = useNavigation();
-  const Navegar = (tela) => {
-    navegation.navigate(tela, {});
-  };
-
-  const countries = ["Sem Tag", "Estudo", "Faculdade", "Minhas Músicas"];
 
   function toggleTela(teste) {
     setGravar(teste);

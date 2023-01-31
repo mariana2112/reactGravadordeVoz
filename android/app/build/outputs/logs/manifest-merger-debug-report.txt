@@ -17,6 +17,7 @@ MERGED from [:react-native-linear-gradient] /Users/user/Documents/GitHub/reactGr
 MERGED from [:react-native-permissions] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-vector-icons] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.69.7] /Users/user/.gradle/caches/transforms-3/1fcd9a43139705c39fd1f09661707281/transformed/jetified-react-native-0.69.7-debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/user/.gradle/caches/transforms-3/fb3746a3b62aa9cf5f767575f9135ac5/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -130,6 +131,8 @@ application
 ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:10:5-29:19
 MERGED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:10:5-29:19
 MERGED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:10:5-29:19
+MERGED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [com.facebook.react:react-native:0.69.7] /Users/user/.gradle/caches/transforms-3/1fcd9a43139705c39fd1f09661707281/transformed/jetified-react-native-0.69.7-debug/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-native:0.69.7] /Users/user/.gradle/caches/transforms-3/1fcd9a43139705c39fd1f09661707281/transformed/jetified-react-native-0.69.7-debug/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/user/.gradle/caches/transforms-3/0d0583b605ea7fcfaea14b1bad4e03b5/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:11:5-20
@@ -162,13 +165,13 @@ MERGED from [com.google.android.play:core:1.9.0] /Users/user/.gradle/caches/tran
 	tools:ignore
 		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/debug/AndroidManifest.xml:10:9-48
 	android:roundIcon
-		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:14:7-52
-		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:14:7-52
+		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:14:7-43
+		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:14:7-43
 	tools:targetApi
 		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/debug/AndroidManifest.xml:9:9-29
 	android:icon
-		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:13:7-41
-		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:13:7-41
+		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:13:7-37
+		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:13:7-37
 	android:allowBackup
 		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:15:7-34
 		ADDED from /Users/user/Documents/GitHub/reactGravadordeVoz/android/app/src/main/AndroidManifest.xml:15:7-34
@@ -232,6 +235,8 @@ MERGED from [:react-native-safe-area-context] /Users/user/Documents/GitHub/react
 MERGED from [:react-native-safe-area-context] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.69.7] /Users/user/.gradle/caches/transforms-3/1fcd9a43139705c39fd1f09661707281/transformed/jetified-react-native-0.69.7-debug/AndroidManifest.xml:5:5-7:41
@@ -384,6 +389,22 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.125.0] /Users/user/.gradle/caches/transforms-3/bae35ff68c27edf412f3700024be0ffe/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.125.0] /Users/user/.gradle/caches/transforms-3/bae35ff68c27edf412f3700024be0ffe/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:22-73
+provider#cl.json.RNShareFileProvider
+ADDED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-72
+	android:exported
+		ADDED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-55
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:64
+	android:resource
+		ADDED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-61
+	android:name
+		ADDED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.5.0] /Users/user/.gradle/caches/transforms-3/1dbe1b9f2422480ae401634522fdddf2/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
 	android:exported

@@ -1928,8 +1928,8 @@ int layout text_view_with_theme_line_height 0x7f0b0064
 int layout text_view_without_line_height 0x7f0b0065
 int menu example_menu 0x7f0c0000
 int menu example_menu2 0x7f0c0001
-int mipmap ic_launcher 0x7f0d0000
-int mipmap ic_launcher_round 0x7f0d0001
+int mipmap micircle 0x7f0d0000
+int mipmap micsqua 0x7f0d0001
 int plurals mtrl_badge_content_description 0x7f0e0000
 int string abc_action_bar_home_description 0x7f0f0000
 int string abc_action_bar_up_description 0x7f0f0001
@@ -3772,7 +3772,8 @@ int styleable ViewStubCompat_android_layout 1
 int styleable ViewStubCompat_android_inflatedId 2
 int xml image_share_filepaths 0x7f120000
 int xml rn_dev_preferences 0x7f120001
-int xml standalone_badge 0x7f120002
-int xml standalone_badge_gravity_bottom_end 0x7f120003
-int xml standalone_badge_gravity_bottom_start 0x7f120004
-int xml standalone_badge_gravity_top_start 0x7f120005
+int xml share_download_paths 0x7f120002
+int xml standalone_badge 0x7f120003
+int xml standalone_badge_gravity_bottom_end 0x7f120004
+int xml standalone_badge_gravity_bottom_start 0x7f120005
+int xml standalone_badge_gravity_top_start 0x7f120006
