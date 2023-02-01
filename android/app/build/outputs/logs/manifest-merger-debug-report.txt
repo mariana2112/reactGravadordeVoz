@@ -18,6 +18,7 @@ MERGED from [:react-native-permissions] /Users/user/Documents/GitHub/reactGravad
 MERGED from [:react-native-safe-area-context] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:react-native-sqlite-storage] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-sqlite-storage/platforms/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.69.7] /Users/user/.gradle/caches/transforms-3/1fcd9a43139705c39fd1f09661707281/transformed/jetified-react-native-0.69.7-debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/user/.gradle/caches/transforms-3/fb3746a3b62aa9cf5f767575f9135ac5/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -237,6 +238,8 @@ MERGED from [:react-native-screens] /Users/user/Documents/GitHub/reactGravadorde
 MERGED from [:react-native-screens] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-share] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-sqlite-storage] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-sqlite-storage/platforms/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-sqlite-storage] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-sqlite-storage/platforms/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/user/Documents/GitHub/reactGravadordeVoz/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.69.7] /Users/user/.gradle/caches/transforms-3/1fcd9a43139705c39fd1f09661707281/transformed/jetified-react-native-0.69.7-debug/AndroidManifest.xml:5:5-7:41

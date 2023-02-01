@@ -22,6 +22,18 @@ import React, { useState } from "react";
 import AudioRecorderPlayer from "react-native-audio-recorder-player";
 import RNFS from "react-native-fs";
 import Share from "react-native-share";
+import SQLite from "react-native-sqlite-storage";
+
+const db = SQLite.openDatabase(
+  {
+    name: "MainDB",
+    location: "default",
+  },
+  () => {},
+  (error) => {
+    console.log(error);
+  }
+);
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
@@ -45,6 +57,17 @@ export default function AppInicio() {
     recordTime: "00:00:00",
   });
   const [gravando, setGravando] = useState(false);
+
+  async function SalvarBanco() {
+    await db.transaction(async (tx) => {
+      await tx.executeSql(
+        "INSERT INTO audios (title, datahora, tamanho, tags, duracao, caminho) VALUES (?,?,?,?,?,?) "[
+          (title, datahora, tamanho, tags, duracao, caminho)
+        ]
+      );
+      console.log(aaaaa);
+    });
+  }
 
   async function onStartRecord() {
     setGravando(true);

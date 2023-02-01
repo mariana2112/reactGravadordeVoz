@@ -6,6 +6,10 @@ includeBuild('../node_modules/react-native-gradle-plugin')
 
 include ':react-native-fs'
 project(':react-native-fs').projectDir = new File(settingsDir, '../node_modules/react-native-fs/android')
+// file: android/settings.gradle
+
+
+
 
 
 if (settings.hasProperty("newArchEnabled") && settings.newArchEnabled == "true") {
