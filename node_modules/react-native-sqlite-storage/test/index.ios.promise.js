@@ -16,9 +16,9 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  ListView
 } from 'react-native';
-import ListView from 'deprecated-react-native-listview';
 
 
 import SQLite from 'react-native-sqlite-storage';

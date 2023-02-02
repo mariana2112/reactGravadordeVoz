@@ -18,26 +18,19 @@ import LinearGradient from "react-native-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 import SelectDropdown from "react-native-select-dropdown";
 import InAppReview from "react-native-in-app-review";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AudioRecorderPlayer from "react-native-audio-recorder-player";
 import RNFS from "react-native-fs";
 import Share from "react-native-share";
-import SQLite from "react-native-sqlite-storage";
-
-const db = SQLite.openDatabase(
-  {
-    name: "MainDB",
-    location: "default",
-  },
-  () => {},
-  (error) => {
-    console.log(error);
-  }
-);
+import sqlite from "../../classes/sqlite";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
+const arrayOptions = ["Sem Tag", "Estudo", "Faculdade", "Minhas Músicas"];
+
 export default function AppInicio() {
+  const [opcao, setOpcao] = useState();
+  const [nome, setNome] = useState();
   const Navegar = (tela) => {
     navegation.navigate(tela, {});
   };
@@ -59,14 +52,12 @@ export default function AppInicio() {
   const [gravando, setGravando] = useState(false);
 
   async function SalvarBanco() {
-    await db.transaction(async (tx) => {
-      await tx.executeSql(
-        "INSERT INTO audios (title, datahora, tamanho, tags, duracao, caminho) VALUES (?,?,?,?,?,?) "[
-          (title, datahora, tamanho, tags, duracao, caminho)
-        ]
-      );
-      console.log(aaaaa);
-    });
+    const date = new Date().toLocaleString();
+    await sqlite.query(
+      `INSERT INTO audios (title, data_hora, tamanho, tags, duracao, caminho) VALUES ("${nome}", "date", "", "${opcao}", "${tempo.recordTime}", "") `
+    );
+
+    console.log(await sqlite.query("SELECT * FROM audios"));
   }
 
   async function onStartRecord() {
@@ -208,8 +199,9 @@ export default function AppInicio() {
                     ></TextInput>
 
                     <SelectDropdown
-                      data={countries}
+                      data={arrayOptions}
                       onSelect={(selectedItem, index) => {
+                        setOpcao(selectedItem);
                         console.log(selectedItem, index);
                       }}
                       defaultButtonText={"Tag"}
@@ -237,12 +229,8 @@ export default function AppInicio() {
                     />
 
                     <View style={Styles.alinhar}>
-                      <TouchableOpacity
-                        onPress={() => setModalVisible(!modalVisible)}
-                      >
-                        <TouchableOpacity
-                          onPress={() => setModalVisibleTwo(!modalVisibleTwo)}
-                        >
+                      <TouchableOpacity onPress={() => SalvarBanco}>
+                        <TouchableOpacity onPress={SalvarBanco}>
                           <LinearGradient
                             style={Styles.salvar}
                             colors={["#BFCDE0", "#5D5D81"]}
