@@ -21,7 +21,6 @@ import InAppReview from "react-native-in-app-review";
 import React, { useState, useEffect } from "react";
 import AudioRecorderPlayer from "react-native-audio-recorder-player";
 import RNFS from "react-native-fs";
-import Share from "react-native-share";
 import sqlite from "../../classes/sqlite";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
@@ -38,7 +37,7 @@ export default function AppInicio() {
   const [defaultRating, setDefaultRating] = useState(2);
   const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
   const [modalVisible, setModalVisible] = useState(false);
-  const [modalVisibleTwo, setModalVisibleTwo] = useState(false);
+  const [modalVisibleTwo, setModalVisibleTwo] = useState(true);
   const [gravar, setGravar] = useState(true);
   const navegation = useNavigation();
   const [frase, setFrase] = useState({
@@ -229,16 +228,15 @@ export default function AppInicio() {
                     />
 
                     <View style={Styles.alinhar}>
-                      <TouchableOpacity onPress={() => SalvarBanco}>
-                        <TouchableOpacity onPress={SalvarBanco}>
-                          <LinearGradient
-                            style={Styles.salvar}
-                            colors={["#BFCDE0", "#5D5D81"]}
-                          >
-                            <Text style={Styles.textStyle1}>Salvar</Text>
-                          </LinearGradient>
-                        </TouchableOpacity>
+                      <TouchableOpacity onPress={SalvarBanco}>
+                        <LinearGradient
+                          style={Styles.salvar}
+                          colors={["#BFCDE0", "#5D5D81"]}
+                        >
+                          <Text style={Styles.textStyle1}>Salvar</Text>
+                        </LinearGradient>
                       </TouchableOpacity>
+
                       <TouchableOpacity
                         onPress={() => setModalVisible(!modalVisible)}
                       >
