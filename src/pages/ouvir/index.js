@@ -5,22 +5,23 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { Slider } from "@miblanchard/react-native-slider";
 import LinearGradient from "react-native-linear-gradient";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import sqlite from "../../classes/sqlite";
 
 export default function Ouvir() {
   const [playerState, setPlayerState] = useState(false);
+  const [list, setList] = useState([]);
 
-  const ARRAY = [
-    {
-      id: "1",
-      nome: "Teste.mp4",
-      data: "12/01/2023",
-      hora: "14:50",
-      kb: "46,21kB",
-      tag: "Estudo",
-      tempo: "00:45",
-    },
-  ];
+  useEffect(() => {
+    async function getData() {
+      // set os valores do database
+      const data = await sqlite.query("SELECT * FROM audios");
+
+      setList(data);
+    }
+
+    getData();
+  }, []);
 
   function toggleMusicPlay() {
     setPlayerState(!playerState);
@@ -34,7 +35,7 @@ export default function Ouvir() {
     <View style={Styles.container}>
       <View style={Styles.body}>
         <FlatList
-          data={ARRAY}
+          data={list}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
         />

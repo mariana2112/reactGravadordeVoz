@@ -81,7 +81,7 @@ const Styles = StyleSheet.create({
 
   linha5: {
     flexDirection: "row-reverse",
-    marginRight: 148,
+    marginRight: 240,
   },
 
   linhav: {
@@ -122,7 +122,6 @@ const Styles = StyleSheet.create({
     backgroundColor: "#3B3355",
     color: "#BFCDE0",
     borderRadius: 2,
-    width: 40,
     textAlign: "center",
     marginRight: 10,
     top: -11,

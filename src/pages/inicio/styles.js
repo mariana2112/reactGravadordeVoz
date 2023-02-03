@@ -148,15 +148,20 @@ const Styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+
   input: {
-    width: 262,
-    height: 47,
+    marginBottom: "10%",
     borderWidth: 1,
     borderColor: "#3B3355",
-    color: "black",
-    borderRadius: 7,
-    marginBottom: 30,
+    padding: 10,
+    borderRadius: 5,
+    width: 262,
+    height: 47,
+    color: "#3B3355",
+    fontSize: 16,
+    fontWeight: "400",
   },
+
   dropdown1BtnStyle: {
     width: 262,
     height: 47,

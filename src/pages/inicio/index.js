@@ -33,7 +33,6 @@ export default function AppInicio() {
   const Navegar = (tela) => {
     navegation.navigate(tela, {});
   };
-  const countries = ["Sem Tag", "Estudo", "Faculdade", "Minhas Músicas"];
   const [defaultRating, setDefaultRating] = useState(2);
   const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
   const [modalVisible, setModalVisible] = useState(false);
@@ -109,14 +108,6 @@ export default function AppInicio() {
       recordTime: tempo.recordTime,
     });
 
-    // const shareOptions = {
-    //   title: "Share file",
-    //   failOnCancel: false,
-    //   saveToFiles: true,
-    // };
-
-    // await Share.open(shareOptions);
-
     await RNFS.copyFile(result, RNFS.DocumentDirectoryPath + "/test.mp4")
       .then((success) => {
         console.log("file moved!", success);
@@ -183,7 +174,6 @@ export default function AppInicio() {
               transparent={true}
               visible={modalVisible}
               onRequestClose={() => {
-                Alert.alert("Modal has been closed.");
                 setModalVisible(!modalVisible);
               }}
             >
@@ -192,10 +182,15 @@ export default function AppInicio() {
                   <Text style={Styles.modalText}>Salvar Gravação</Text>
                   <View>
                     <TextInput
+                      value={nome}
+                      onChangeText={(tex) => {
+                        setNome(tex);
+                      }}
                       style={Styles.input}
                       maxLength={50}
+                      placeholderTextColor="#c9c9c9"
                       placeholder="Nome"
-                    ></TextInput>
+                    />
 
                     <SelectDropdown
                       data={arrayOptions}
@@ -267,7 +262,7 @@ export default function AppInicio() {
                 <View style={Styles.modalView}>
                   <TouchableOpacity
                     style={Styles.circle}
-                    onPress={() => setModalVisibleTwo(!modalVisibleTwo)}
+                    onPress={() => setModalVisible(!modalVisibleTwo)}
                   >
                     <LinearGradient
                       style={Styles.btcircle}

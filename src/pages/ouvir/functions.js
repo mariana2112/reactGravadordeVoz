@@ -11,12 +11,12 @@ export function Navegar(navigation) {
 export function Item({ data }) {
   return (
     <View style={Styles.linha3}>
-      <Text style={Styles.title}>{data.nome}</Text>
+      <Text style={Styles.title}>{data.title}</Text>
 
       <View style={Styles.linha4}>
-        <Text style={Styles.subtext}>{data.data}</Text>
+        <Text style={Styles.subtext}>{data.data_hora}</Text>
         <Text style={Styles.subtext}>{data.hora}</Text>
-        <Text style={Styles.subtext}>{data.kb}</Text>
+        <Text style={Styles.subtext}>{data.tamanho}</Text>
 
         <View style={Styles.linha5}>
           <Entypo name="dots-three-vertical" size={25} color={"#3B3355"} />
@@ -25,8 +25,8 @@ export function Item({ data }) {
       </View>
 
       <View style={Styles.linha4}>
-        <Text style={Styles.tag}>{data.tag}</Text>
-        <Text style={Styles.time}>{data.tempo}</Text>
+        <Text style={Styles.tag}>{data.tags}</Text>
+        <Text style={Styles.time}>{data.duracao}</Text>
       </View>
 
       <View style={Styles.linhav} />
