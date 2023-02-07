@@ -9,7 +9,6 @@ import React, { useState, useEffect } from "react";
 import sqlite from "../../classes/sqlite";
 
 export default function Ouvir() {
-  const [modalVisible, setModalVisible] = useState(false);
   const [playerState, setPlayerState] = useState(false);
   const [list, setList] = useState([]);
 

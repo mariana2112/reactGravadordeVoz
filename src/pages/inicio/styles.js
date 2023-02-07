@@ -215,5 +215,11 @@ const Styles = StyleSheet.create({
     alignItems: "center",
     top: 3,
   },
+  botao: {
+    width: 55,
+    height: 55,
+    backgroundColor: "red",
+    marginRight: 10,
+  },
 });
 export default Styles;

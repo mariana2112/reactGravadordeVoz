@@ -134,6 +134,12 @@ const Styles = StyleSheet.create({
     color: "white",
     fontFamily: "SofiaSans-VariableFont",
   },
+  botao: {
+    width: 50,
+    height: 50,
+    color: "red",
+    top: 50,
+  },
 });
 
 export default Styles;
