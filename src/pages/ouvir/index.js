@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, FlatList } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, Modal } from "react-native";
 import Styles from "./styles";
 import { Item } from "./functions";
 import AntDesign from "react-native-vector-icons/AntDesign";
@@ -9,6 +9,7 @@ import React, { useState, useEffect } from "react";
 import sqlite from "../../classes/sqlite";
 
 export default function Ouvir() {
+  const [modalVisible, setModalVisible] = useState(false);
   const [playerState, setPlayerState] = useState(false);
   const [list, setList] = useState([]);
 

@@ -36,7 +36,7 @@ export default function AppInicio() {
   const [defaultRating, setDefaultRating] = useState(2);
   const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
   const [modalVisible, setModalVisible] = useState(false);
-  const [modalVisibleTwo, setModalVisibleTwo] = useState(true);
+  const [modalVisibleTwo, setModalVisibleTwo] = useState(false);
   const [gravar, setGravar] = useState(true);
   const navegation = useNavigation();
   const [frase, setFrase] = useState({
@@ -223,12 +223,16 @@ export default function AppInicio() {
                     />
 
                     <View style={Styles.alinhar}>
-                      <TouchableOpacity onPress={SalvarBanco}>
+                      <TouchableOpacity
+                        onPress={() => setModalVisibleTwo(true)}
+                      >
                         <LinearGradient
                           style={Styles.salvar}
                           colors={["#BFCDE0", "#5D5D81"]}
                         >
-                          <Text style={Styles.textStyle1}>Salvar</Text>
+                          <Text onPress={SalvarBanco} style={Styles.textStyle1}>
+                            Salvar
+                          </Text>
                         </LinearGradient>
                       </TouchableOpacity>
 
@@ -262,7 +266,7 @@ export default function AppInicio() {
                 <View style={Styles.modalView}>
                   <TouchableOpacity
                     style={Styles.circle}
-                    onPress={() => setModalVisible(!modalVisibleTwo)}
+                    onPress={() => setModalVisibleTwo(false)}
                   >
                     <LinearGradient
                       style={Styles.btcircle}
