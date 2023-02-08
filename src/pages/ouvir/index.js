@@ -4,9 +4,10 @@ import { Item } from "./functions";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { Slider } from "@miblanchard/react-native-slider";
-import LinearGradient from "react-native-linear-gradient";
 import React, { useState, useEffect } from "react";
 import sqlite from "../../classes/sqlite";
+
+import LinearGradient from "react-native-linear-gradient";
 
 export default function Ouvir() {
   const [playerState, setPlayerState] = useState(false);
