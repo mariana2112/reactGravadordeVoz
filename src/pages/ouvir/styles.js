@@ -140,6 +140,42 @@ const Styles = StyleSheet.create({
     color: "red",
     top: 50,
   },
+  delete: {
+    fontSize: 20,
+    color: "white",
+    fontWeight: "500",
+    marginLeft: 10,
+  },
+  btdelete: {
+    backgroundColor: "#7a0505",
+    alignSelf: "flex-end",
+    borderRadius: 10,
+    width: 115,
+    marginRight: 18,
+    bottom: 5,
+    height: 30,
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  centeredView3: {
+    flex: 1,
+    width: 330,
+    height: 310,
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  modalView: {
+    backgroundColor: "white",
+    borderRadius: 5,
+    padding: 20,
+    alignItems: "center",
+    elevation: 5,
+  },
 });
 
 export default Styles;

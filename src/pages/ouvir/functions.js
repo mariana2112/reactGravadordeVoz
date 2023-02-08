@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Modal, TouchableOpacity } from "react-native";
 import Styles from "./styles";
 import Feather from "react-native-vector-icons/Feather";
 import Entypo from "react-native-vector-icons/Entypo";
@@ -7,6 +7,8 @@ import Entypo from "react-native-vector-icons/Entypo";
 export function Navegar(navigation) {
   navigation.navigate("AppInicio");
 }
+const [modalVisible, setModalVisible] = useState(false);
+const [modalVisibleTwo, setModalVisibleTwo] = useState(false);
 
 export function Item({ data }) {
   return (
@@ -24,8 +26,38 @@ export function Item({ data }) {
         </View>
       </View>
 
+      <View style={Styles.centeredView}>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}
+        >
+          <View style={Styles.centeredView}>
+            <View style={Styles.modalView}>
+              <TouchableOpacity
+                style={Styles.btdelete}
+                onPress={() => RemoveElement()}
+              >
+                <Text style={Styles.delete}>Deletar</Text>
+                <Icon
+                  name="delete"
+                  size={20}
+                  color="white"
+                  style={Styles.icon}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+      </View>
+
       <View style={Styles.linha4}>
-        <Text style={Styles.tag}>{data.tags}</Text>
+        <TouchableOpacity on>
+          <Text style={Styles.tag}>{data.tags}</Text>
+        </TouchableOpacity>
         <Text style={Styles.time}>{data.duracao}</Text>
       </View>
 

@@ -231,7 +231,10 @@ export default function AppInicio() {
                           style={Styles.salvar}
                           colors={["#BFCDE0", "#5D5D81"]}
                         >
-                          <Text onPress={SalvarBanco} style={Styles.textStyle1}>
+                          <Text
+                            onPress={modalVisibleTwo}
+                            style={Styles.textStyle1}
+                          >
                             Salvar
                           </Text>
                         </LinearGradient>
