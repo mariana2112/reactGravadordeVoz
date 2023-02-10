@@ -140,41 +140,88 @@ const Styles = StyleSheet.create({
     color: "red",
     top: 50,
   },
-  delete: {
-    fontSize: 20,
-    color: "white",
-    fontWeight: "500",
-    marginLeft: 10,
-  },
-  btdelete: {
-    backgroundColor: "#7a0505",
-    alignSelf: "flex-end",
-    borderRadius: 10,
-    width: 115,
-    marginRight: 18,
-    bottom: 5,
-    height: 30,
-  },
-  centeredView: {
+  modalOpen: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  centeredView3: {
-    flex: 1,
-    width: 330,
-    height: 310,
+    width: 380,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
     alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
   },
 
+  buttonClose: {
+    position: "absolute",
+    left: 280,
+    top: -10,
+  },
+
+  buttonCloseStyles: {
+    borderRadius: 100,
+    width: 30,
+    height: 30,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  icone: {
+    color: "white",
+  },
+
   modalView: {
     backgroundColor: "white",
-    borderRadius: 5,
-    padding: 20,
+    borderRadius: 10,
+    width: 300,
+    height: 200,
     alignItems: "center",
-    elevation: 5,
+  },
+
+  modalText: {
+    fontFamily: "SofiaSans-Light",
+    marginTop: "10%",
+    marginBottom: "5%",
+    fontSize: 16,
+    color: "#3B3355",
+    fontWeight: "600",
+  },
+
+  input: {
+    fontFamily: "SofiaSans-Light",
+    marginBottom: "10%",
+    borderWidth: 1,
+    borderColor: "#3B3355",
+    padding: 10,
+    borderRadius: 5,
+    width: 262,
+    height: 47,
+    color: "#3B3355",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+
+  salvarText: {
+    fontFamily: "SofiaSans-Light",
+    color: "#fff",
+  },
+
+  cancelar: {
+    height: 30,
+    width: 50,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  salvar: {
+    height: 30,
+    width: 50,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: "10%",
+  },
+
+  linhadelete: {
+    flexDirection: "row",
   },
 });
 
