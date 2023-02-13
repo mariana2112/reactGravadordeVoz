@@ -17,7 +17,7 @@ export default function Ouvir() {
     async function getData() {
       // set os valores do database
       const data = await sqlite.query("SELECT * FROM audios");
-
+      console.log(data);
       setList(data);
     }
 

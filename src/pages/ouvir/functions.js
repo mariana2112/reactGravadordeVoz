@@ -26,13 +26,8 @@ export function Item({ data }) {
   const [list, setList] = useState([]);
 
   async function deleteId(id_audio) {
-    await sqlite.query("DELETE FROM audio WHERE id_audio = ?");
-
-    console.log(await sqlite.query("SELECT * FROM audio"));
-  }
-
-  async function handleDelete(id_audio) {
-    await deleteId(id_audio);
+    await sqlite.query(`DELETE FROM audios WHERE id_audio = ${id_audio}`);
+    console.log(await sqlite.query("SELECT * FROM audios"));
   }
 
   return (
@@ -108,7 +103,7 @@ export function Item({ data }) {
                   </LinearGradient>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => handleDelete(data.id_audio)}>
+                <TouchableOpacity onPress={() => deleteId(data.id_audio)}>
                   <LinearGradient
                     colors={["#BFCDE0", "#5D5D81"]}
                     style={Styles.cancelar}

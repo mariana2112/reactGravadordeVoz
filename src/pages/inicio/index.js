@@ -53,10 +53,11 @@ export default function AppInicio() {
   async function SalvarBanco() {
     const date = new Date().toLocaleString();
     await sqlite.query(
-      `INSERT INTO audios (title, data_hora, tamanho, tags, duracao, caminho) VALUES ("${nome}", "date", "", "${opcao}", "${tempo.recordTime}", "") `
+      `INSERT INTO audios (title, data_hora, tamanho, tags, duracao, caminho) VALUES ("${nome}", "${date}", "", "${opcao}", "${tempo.recordTime}", "") `
     );
-
-    console.log(await sqlite.query("SELECT * FROM audios"));
+    //abre o outro modal, o de parabens
+    setModalVisibleTwo(true);
+    setModalVisible(false);
   }
 
   async function onStartRecord() {
@@ -224,19 +225,12 @@ export default function AppInicio() {
                     />
 
                     <View style={Styles.alinhar}>
-                      <TouchableOpacity
-                        onPress={() => setModalVisibleTwo(true)}
-                      >
+                      <TouchableOpacity onPress={SalvarBanco}>
                         <LinearGradient
                           style={Styles.salvar}
                           colors={["#BFCDE0", "#5D5D81"]}
                         >
-                          <Text
-                            onPress={modalVisibleTwo}
-                            style={Styles.textStyle1}
-                          >
-                            Salvar
-                          </Text>
+                          <Text style={Styles.textStyle1}>Salvar</Text>
                         </LinearGradient>
                       </TouchableOpacity>
 
