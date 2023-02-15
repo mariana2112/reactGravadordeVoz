@@ -21,8 +21,8 @@ import InAppReview from "react-native-in-app-review";
 import AudioRecorderPlayer from "react-native-audio-recorder-player";
 import RNFS from "react-native-fs";
 import sqlite from "../../classes/sqlite";
-import React, { useState, useEffect } from "react";
-import { useRoute } from "@react-navigation/native";
+
+import React, { useState } from "react";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
@@ -51,7 +51,7 @@ export default function AppInicio() {
   const [gravando, setGravando] = useState(false);
 
   async function SalvarBanco() {
-    const date = new Date().toLocaleString();
+    const date = new Date().toLocaleDateString();
     await sqlite.query(
       `INSERT INTO audios (title, data_hora, tamanho, tags, duracao, caminho) VALUES ("${nome}", "${date}", "", "${opcao}", "${tempo.recordTime}", "") `
     );
