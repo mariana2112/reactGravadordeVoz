@@ -81,7 +81,7 @@ const Styles = StyleSheet.create({
 
   linha5: {
     flexDirection: "row-reverse",
-    marginRight: 135,
+    marginRight: 180,
   },
 
   linhav: {

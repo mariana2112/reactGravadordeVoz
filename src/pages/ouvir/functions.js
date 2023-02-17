@@ -25,7 +25,7 @@ export function Item({ data, setList, setAtualiza, TouchClique }) {
 
   //SEMPRE FAZER COM SQLITE, LEMBRA DE PUXAR COMO $
   async function deleteId(id_audio) {
-    await sqlite.query(`DELETE FROM audios WHERE id_audio = ${id_audio}`);
+    await sqlite.query(`DELETE FROM audio WHERE id_audio = ${id_audio}`);
 
     // um jeito de fazer o atualiza página é desse jeito
     // setList(await sqlite.query('SELECT * FROM audios'));
@@ -38,7 +38,7 @@ export function Item({ data, setList, setAtualiza, TouchClique }) {
         <Text style={Styles.title}>{data.title}</Text>
 
         <View style={Styles.linha4}>
-          <Text style={Styles.subtext}>{data.data_hora}</Text>
+          <Text style={Styles.subtext}>{data.data}</Text>
           <Text style={Styles.subtext}>{data.hora}</Text>
           <Text style={Styles.subtext}>{data.tamanho}</Text>
 
@@ -54,7 +54,8 @@ export function Item({ data, setList, setAtualiza, TouchClique }) {
         </View>
 
         <View style={Styles.linha4}>
-          <Text style={Styles.tag}>{data.tags}</Text>
+          <Text style={Styles.tag}>{data.tags} </Text>
+
           <Text style={Styles.time}>{data.duracao}</Text>
         </View>
 

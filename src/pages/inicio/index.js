@@ -52,8 +52,9 @@ export default function AppInicio() {
 
   async function SalvarBanco() {
     const date = new Date().toLocaleDateString();
+    const Time = new Date().toLocaleTimeString();
     await sqlite.query(
-      `INSERT INTO audios (title, data_hora, tamanho, tags, duracao, caminho) VALUES ("${nome}", "${date}", "", "${opcao}", "${tempo.recordTime}", "") `
+      `INSERT INTO audios (title, data, hora, tamanho, tags, duracao, caminho) VALUES ("${nome}", "${date}", "${Time}", "", "${opcao}", "${tempo.recordTime}", "") `
     );
     //abre o outro modal, o de parabens
     setModalVisibleTwo(true);
