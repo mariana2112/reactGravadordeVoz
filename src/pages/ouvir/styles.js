@@ -223,6 +223,13 @@ const Styles = StyleSheet.create({
   linhadelete: {
     flexDirection: "row",
   },
+  backg: {
+    backgroundColor: "#dddd",
+  },
+
+  backg2: {
+    backgroundColor: "white",
+  },
 });
 
 export default Styles;
