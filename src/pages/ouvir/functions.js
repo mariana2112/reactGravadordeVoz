@@ -19,17 +19,24 @@ export function Navegar(navigation) {
   navigation.navigate("Principal");
 }
 
-export function Item({ data, setList, setAtualiza, TouchClique }) {
+export function Item({ data, setAtualiza, TouchClique }) {
   const [modalVisibleIcon, setModalVisibleIcon] = useState(false);
   const [nome, setNome] = useState("");
 
   //SEMPRE FAZER COM SQLITE, LEMBRA DE PUXAR COMO $
   async function deleteId(id_audio) {
-    await sqlite.query(`DELETE FROM audio WHERE id_audio = ${id_audio}`);
+    await sqlite.query(`DELETE FROM audios WHERE id_audio = ${id_audio}`);
 
     // um jeito de fazer o atualiza página é desse jeito
     // setList(await sqlite.query('SELECT * FROM audios'));
     setAtualiza(new Date());
+  }
+
+  async function update(id_audio) {
+    await sqlite.query(
+      `UPDATE audios SET title="${nome}" WHERE id_audio = ${id_audio}`
+    );
+    setAtualiza(await sqlite.query("SELECT * FROM audios"));
   }
 
   return (
@@ -98,7 +105,7 @@ export function Item({ data, setList, setAtualiza, TouchClique }) {
                 />
 
                 <View style={Styles.linhadelete}>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => update(data.id_audio)}>
                     <LinearGradient
                       colors={["#BFCDE0", "#5D5D81"]}
                       style={Styles.salvar}
