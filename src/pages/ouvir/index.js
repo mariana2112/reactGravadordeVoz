@@ -6,7 +6,6 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { Slider } from "@miblanchard/react-native-slider";
 import React, { useState, useEffect } from "react";
 import sqlite from "../../classes/sqlite";
-
 import LinearGradient from "react-native-linear-gradient";
 
 export default function Ouvir() {
