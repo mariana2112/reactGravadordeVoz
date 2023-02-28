@@ -19,7 +19,7 @@ export function Navegar(navigation) {
   navigation.navigate("Principal");
 }
 
-export function Item({ data, setAtualiza, TouchClique }) {
+export function Item({ data, setAtualiza, setCliqueLista, cliqueLista }) {
   const [modalVisibleIcon, setModalVisibleIcon] = useState(false);
   const [nome, setNome] = useState("");
 
@@ -41,7 +41,13 @@ export function Item({ data, setAtualiza, TouchClique }) {
 
   return (
     <View style={Styles.linha3}>
-      <TouchableOpacity onPress={TouchClique}>
+      <TouchableOpacity
+        onPress={() => setCliqueLista(data.id_audio)}
+        style={[
+          Styles.backg2,
+          cliqueLista === data.id_audio ? Styles.backg : false,
+        ]}
+      >
         <Text style={Styles.title}>{data.title}</Text>
 
         <View style={Styles.linha4}>

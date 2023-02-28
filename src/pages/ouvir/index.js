@@ -36,8 +36,8 @@ export default function Ouvir() {
       <Item
         data={item}
         setList={setList}
-        setAtualiza={setAtualiza}
-        TouchClique={TouchClique}
+        setCliqueLista={setCliqueLista}
+        cliqueLista={cliqueLista}
       />
     );
   }
@@ -49,7 +49,6 @@ export default function Ouvir() {
           data={list}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
-          style={[Styles.backg2, cliqueLista ? Styles.backg : false]}
         />
       </View>
 
