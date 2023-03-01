@@ -120,20 +120,35 @@ export default function AppInicio() {
       result,
       RNFS.DocumentDirectoryPath + `${nomeArquivo}.mp4`
     )
-      .then((success) => {
+      .then(async (success) => {
         console.log("file moved!", success);
+        const { size } = await RNFS.stat(
+          RNFS.DocumentDirectoryPath + nomeArquivo
+        );
+
+        setTamanhoArq(size);
       })
       .catch((err) => {
         console.log("Error: " + err.message);
       });
 
-    const { size } = await RNFS.stat(RNFS.DocumentDirectoryPath + nomeArquivo);
-
-    setTamanhoArq(size);
-
     //setModalVisible serve para mostrar o modal
     setModalVisible(true);
   }
+
+  // onStartPlay = async () => {
+  //   console.log("onStartPlay");
+  //   const result = await audioRecorderPlayer.startPlayer();
+  //   console.log(msg);
+  //   audioRecorderPlayer.addPlayBackListener((e) => {
+  //     setTempo({
+  //       recordSecs: 0,
+  //       recordTime: tempo.recordTime,
+  //     });
+  //     return;
+  //   });
+  // };
+
   function toggleTela(teste) {
     setGravar(teste);
   }
