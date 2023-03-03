@@ -7,12 +7,17 @@ import { Slider } from "@miblanchard/react-native-slider";
 import React, { useState, useEffect } from "react";
 import sqlite from "../../classes/sqlite";
 import LinearGradient from "react-native-linear-gradient";
+import AudioRecorderPlayer from "react-native-audio-recorder-player";
+
+const audioRecorderPlayer = new AudioRecorderPlayer();
 
 export default function Ouvir() {
-  const [playerState, setPlayerState] = useState(false);
+  const [play, setPlay] = useState(false);
   const [list, setList] = useState([]);
   const [atualiza, setAtualiza] = useState(false);
-  const [cliqueLista, setCliqueLista] = useState(false);
+  const [cliqueLista, setCliqueLista] = useState(false); //chama player
+  const [recording, setRecording] = useState(false);
+
   useEffect(() => {
     async function getData() {
       // set os valores do database
@@ -22,8 +27,8 @@ export default function Ouvir() {
     getData();
   }, [atualiza]);
 
-  function toggleMusicPlay() {
-    setPlayerState(!playerState);
+  function TouchPlay() {
+    setPlay(!play);
   }
 
   function TouchClique() {
@@ -40,6 +45,32 @@ export default function Ouvir() {
         cliqueLista={cliqueLista}
       />
     );
+  }
+
+  async function onStartPlay() {
+    const msg = await audioRecorderPlayer.startPlayer();
+    console.log(msg);
+    this.audioRecorderPlayer.addPlayBackListener((e) => {
+      this.setState({
+        currentPositionSec: e.currentPosition,
+        currentDurationSec: e.duration,
+        playTime: this.audioRecorderPlayer.mmssss(
+          Math.floor(e.currentPosition)
+        ),
+        duration: this.audioRecorderPlayer.mmssss(Math.floor(e.duration)),
+      });
+      return;
+    });
+  }
+
+  async function onPausePlay() {
+    await this.audioRecorderPlayer.pausePlayer();
+  }
+
+  async function onStopPlay() {
+    console.log("onStopPlay");
+    this.audioRecorderPlayer.stopPlayer();
+    this.audioRecorderPlayer.removePlayBackListener();
   }
 
   return (
@@ -75,19 +106,19 @@ export default function Ouvir() {
               <Ionicons name="ios-repeat-outline" size={35} color="white" />
             </TouchableOpacity>
 
-            <TouchableOpacity>
-              <AntDesign name="banckward" size={30} color="white" />
+            <TouchableOpacity onPress={recording ? onStopPlay : onStartPlay}>
+              <AntDesign name="banckward" size={30} color="#3B3355" />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={toggleMusicPlay}>
-              {playerState ? (
+            <TouchableOpacity onPress={TouchPlay}>
+              {play ? (
                 <AntDesign name="play" size={100} color={"white"} />
               ) : (
                 <Ionicons name="stop-circle" size={120} color={"white"} />
               )}
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={recording ? onStopPlay : onPausePlay}>
               <AntDesign name="forward" size={30} color="white" />
             </TouchableOpacity>
 

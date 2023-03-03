@@ -25,7 +25,6 @@ import sqlite from "../../classes/sqlite";
 import React, { useState } from "react";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
-
 const arrayOptions = ["Sem Tag", "Estudo", "Faculdade", "Minhas Músicas"];
 
 export default function AppInicio() {
@@ -114,7 +113,7 @@ export default function AppInicio() {
     });
 
     //conferir math random
-    const nomeArquivo = Math.random(0, 1000);
+    const nomeArquivo = Math.floor(Math.random() * 2000);
 
     await RNFS.copyFile(
       result,
@@ -123,7 +122,7 @@ export default function AppInicio() {
       .then(async (success) => {
         console.log("file moved!", success);
         const { size } = await RNFS.stat(
-          RNFS.DocumentDirectoryPath + nomeArquivo
+          RNFS.DocumentDirectoryPath + `${nomeArquivo}.mp4`
         );
 
         setTamanhoArq(size);
@@ -135,19 +134,6 @@ export default function AppInicio() {
     //setModalVisible serve para mostrar o modal
     setModalVisible(true);
   }
-
-  // onStartPlay = async () => {
-  //   console.log("onStartPlay");
-  //   const result = await audioRecorderPlayer.startPlayer();
-  //   console.log(msg);
-  //   audioRecorderPlayer.addPlayBackListener((e) => {
-  //     setTempo({
-  //       recordSecs: 0,
-  //       recordTime: tempo.recordTime,
-  //     });
-  //     return;
-  //   });
-  // };
 
   function toggleTela(teste) {
     setGravar(teste);
