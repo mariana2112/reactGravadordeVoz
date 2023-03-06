@@ -64,13 +64,13 @@ export default function Ouvir() {
   }
 
   async function onPausePlay() {
-    await this.audioRecorderPlayer.pausePlayer();
+    await audioRecorderPlayer.pausePlayer();
   }
 
   async function onStopPlay() {
     console.log("onStopPlay");
-    this.audioRecorderPlayer.stopPlayer();
-    this.audioRecorderPlayer.removePlayBackListener();
+    audioRecorderPlayer.stopPlayer();
+    audioRecorderPlayer.removePlayBackListener();
   }
 
   return (
