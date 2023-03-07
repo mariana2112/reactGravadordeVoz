@@ -28,7 +28,7 @@ export default function Ouvir() {
   }, [atualiza]);
 
   function TouchPlay() {
-    setPlay(!play);
+    setRecording(!recording);
   }
 
   function TouchClique() {
@@ -48,6 +48,7 @@ export default function Ouvir() {
   }
 
   async function onStartPlay() {
+    setRecording(true);
     const msg = await audioRecorderPlayer.startPlayer();
     console.log(msg);
     this.audioRecorderPlayer.addPlayBackListener((e) => {
@@ -64,13 +65,8 @@ export default function Ouvir() {
   }
 
   async function onPausePlay() {
+    setRecording(false);
     await audioRecorderPlayer.pausePlayer();
-  }
-
-  async function onStopPlay() {
-    console.log("onStopPlay");
-    audioRecorderPlayer.stopPlayer();
-    audioRecorderPlayer.removePlayBackListener();
   }
 
   return (
@@ -106,11 +102,11 @@ export default function Ouvir() {
               <Ionicons name="ios-repeat-outline" size={35} color="white" />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={recording ? onStopPlay : onStartPlay}>
+            <TouchableOpacity>
               <AntDesign name="banckward" size={30} color="#3B3355" />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={TouchPlay}>
+            <TouchableOpacity onPress={recording ? onPausePlay : onStartPlay}>
               {play ? (
                 <AntDesign name="play" size={100} color={"white"} />
               ) : (
@@ -118,7 +114,7 @@ export default function Ouvir() {
               )}
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={recording ? onStopPlay : onPausePlay}>
+            <TouchableOpacity>
               <AntDesign name="forward" size={30} color="white" />
             </TouchableOpacity>
 
