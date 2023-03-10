@@ -48,14 +48,17 @@ export default function AppInicio() {
     recordTime: "00:00:00",
   });
   const [tamanhoArq, setTamanhoArq] = useState();
-
   const [gravando, setGravando] = useState(false);
+  const [caminho, setCaminho] = useState("");
 
   async function SalvarBanco() {
     const date = new Date().toLocaleDateString();
     const Time = new Date().toLocaleTimeString();
+
     await sqlite.query(
-      `INSERT INTO audios (title, data, hora, tamanho, tags, duracao, caminho) VALUES ("${nome}", "${date}", "${Time}", "${tamanhoArq}", "${opcao}", "${tempo.recordTime}", "") `
+      `INSERT INTO audios (title, data, hora, tamanho, tags, duracao, caminho) VALUES ("${nome}", "${date}", "${Time}", "${tamanhoArq}", "${opcao}", "${
+        tempo.recordTime
+      }", "${RNFS.DocumentDirectoryPath + `${caminho}.mp4`}") `
     );
     //abre o outro modal, o de parabens
     setModalVisibleTwo(true);
@@ -112,7 +115,6 @@ export default function AppInicio() {
       recordTime: tempo.recordTime,
     });
 
-    //conferir math random
     const nomeArquivo = Math.floor(Math.random() * 2000);
 
     await RNFS.copyFile(
@@ -120,7 +122,7 @@ export default function AppInicio() {
       RNFS.DocumentDirectoryPath + `${nomeArquivo}.mp4`
     )
       .then(async (success) => {
-        console.log("file moved!", success);
+        setCaminho(nomeArquivo);
         const { size } = await RNFS.stat(
           RNFS.DocumentDirectoryPath + `${nomeArquivo}.mp4`
         );

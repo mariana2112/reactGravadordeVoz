@@ -61,6 +61,7 @@ const Styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     flex: 1,
+    bottom: 10,
   },
 
   linha2: {
@@ -220,6 +221,17 @@ const Styles = StyleSheet.create({
     marginLeft: "10%",
   },
 
+  back: {
+    flex: 1,
+    borderRadius: 25,
+    height: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: "10%",
+    backgroundColor: "black",
+    bottom: 180,
+  },
+
   linhadelete: {
     flexDirection: "row",
   },
@@ -228,6 +240,11 @@ const Styles = StyleSheet.create({
     marginRight: 12,
   },
 
+  linhabt: {
+    flexDirection: "row",
+    top: 160,
+    marginRight: 25,
+  },
   backg2: {
     backgroundColor: "white",
   },
