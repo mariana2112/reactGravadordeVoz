@@ -11,6 +11,7 @@ import {
 import Styles from "./styles";
 import Feather from "react-native-vector-icons/Feather";
 import Entypo from "react-native-vector-icons/Entypo";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import LinearGradient from "react-native-linear-gradient";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
@@ -84,7 +85,15 @@ export function Navegar(navigation) {
   navigation.navigate("Principal");
 }
 
-export function Item({ data, setAtualiza, setCliqueLista, cliqueLista }) {
+export function Item({
+  data,
+  setAtualiza,
+  setCliqueLista,
+  cliqueLista,
+  recording,
+  onStartPlay,
+  onPausePlay,
+}) {
   const [modalVisibleIcon, setModalVisibleIcon] = useState(false);
   const [modal, setModal] = useState(false);
   const [nome, setNome] = useState("");
@@ -226,7 +235,7 @@ export function Item({ data, setAtualiza, setCliqueLista, cliqueLista }) {
                 <View style={{ flex: 1, flexDirection: "row" }}>
                   <SliderContainer
                     caption="<Slider/> 2 thumbs, min, max, and custom tint"
-                    sliderValue={[6, 18]}
+                    sliderValue={[4, 16]}
                   >
                     <Slider
                       animateTransitions
@@ -238,6 +247,25 @@ export function Item({ data, setAtualiza, setCliqueLista, cliqueLista }) {
                       thumbTintColor="black"
                     />
                   </SliderContainer>
+                </View>
+
+                <View style={Styles.editor}>
+                  <Text style={Styles.tempo}>0:00</Text>
+
+                  <TouchableOpacity
+                    style={Styles.bt}
+                    onPress={recording ? onPausePlay : onStartPlay}
+                  >
+                    {recording ? (
+                      <Ionicons
+                        name="ios-stop-circle-outline"
+                        size={50}
+                        color={"#3B3355"}
+                      />
+                    ) : (
+                      <AntDesign name="play" size={50} color={"#3B3355"} />
+                    )}
+                  </TouchableOpacity>
                 </View>
 
                 <View style={Styles.linhabt}>

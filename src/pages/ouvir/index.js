@@ -52,6 +52,9 @@ export default function Ouvir() {
         TouchClique={TouchClique}
         cliqueLista={cliqueLista}
         setCliqueLista={setCliqueLista}
+        recording={recording}
+        onPausePlay={onPausePlay}
+        onStartPlay={onStartPlay}
       />
     );
   }
@@ -144,7 +147,7 @@ export default function Ouvir() {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={recording ? onPausePlay : onStartPlay}>
-              {play ? (
+              {recording ? (
                 <AntDesign name="play" size={100} color={"white"} />
               ) : (
                 <Ionicons name="stop-circle" size={120} color={"white"} />

@@ -248,6 +248,21 @@ const Styles = StyleSheet.create({
   backg2: {
     backgroundColor: "white",
   },
+  tempo: {
+    fontFamily: "SofiaSans",
+    fontSize: 30,
+    fontWeight: "600",
+    color: "#3B3355",
+    top: 15,
+  },
+  editor: {
+    flexDirection: "row",
+    justifyContent: "center",
+    paddingBottom: 25,
+  },
+  bt: {
+    margin: 10,
+  },
 });
 
 export default Styles;
