@@ -17,6 +17,7 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import sqlite from "../../classes/sqlite";
 import { Slider } from "@miblanchard/react-native-slider";
+import Trimmer from "react-native-trimmer";
 
 const borderWidth = 4;
 const trackMarkStyles = StyleSheet.create({
@@ -93,6 +94,7 @@ export function Item({
   recording,
   onStartPlay,
   onPausePlay,
+  duracao,
 }) {
   const [modalVisibleIcon, setModalVisibleIcon] = useState(false);
   const [modal, setModal] = useState(false);
@@ -250,7 +252,7 @@ export function Item({
                 </View>
 
                 <View style={Styles.editor}>
-                  <Text style={Styles.tempo}>0:00</Text>
+                  <Text style={Styles.tempo}>{data.duracao}</Text>
 
                   <TouchableOpacity
                     style={Styles.bt}
