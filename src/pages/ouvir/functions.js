@@ -6,7 +6,6 @@ import {
   Modal,
   TextInput,
   TouchableWithoutFeedback,
-  StyleSheet,
 } from "react-native";
 import Styles from "./styles";
 import Feather from "react-native-vector-icons/Feather";
@@ -18,69 +17,6 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import sqlite from "../../classes/sqlite";
 import { Slider } from "@miblanchard/react-native-slider";
 import Trimmer from "react-native-trimmer";
-
-const borderWidth = 4;
-const trackMarkStyles = StyleSheet.create({
-  activeMark: {
-    borderColor: "red",
-    borderWidth,
-    left: -borderWidth / 2,
-  },
-  inactiveMark: {
-    borderColor: "grey",
-    borderWidth,
-    left: -borderWidth / 2,
-  },
-});
-
-const SliderContainer = ({
-  caption,
-  children,
-  sliderValue,
-  trackMarks,
-  vertical,
-}) => {
-  const [value, setValue] = useState(sliderValue);
-  let renderTrackMarkComponent;
-
-  if (trackMarks?.length && (!Array.isArray(value) || value?.length === 1)) {
-    renderTrackMarkComponent = (index) => {
-      const currentMarkValue = trackMarks[index];
-      const currentSliderValue =
-        value || (Array.isArray(value) && value[0]) || 0;
-      const style =
-        currentMarkValue > Math.max(currentSliderValue)
-          ? trackMarkStyles.activeMark
-          : trackMarkStyles.inactiveMark;
-      return <View style={style} />;
-    };
-  }
-
-  const renderChildren = () => {
-    return React.Children.map(children, (child) => {
-      if (!!child && child.type === Slider) {
-        return React.cloneElement(child, {
-          onValueChange: setValue,
-          renderTrackMarkComponent,
-          trackMarks,
-          value,
-        });
-      }
-
-      return child;
-    });
-  };
-
-  return (
-    <View style={Styles.sliderContainer}>
-      <View style={Styles.titleContainer}>
-        <Text>{caption}</Text>
-        <Text>{Array.isArray(value) ? value.join(" - ") : value}</Text>
-      </View>
-      {renderChildren()}
-    </View>
-  );
-};
 
 export function Navegar(navigation) {
   navigation.navigate("Principal");
@@ -94,7 +30,6 @@ export function Item({
   recording,
   onStartPlay,
   onPausePlay,
-  duracao,
 }) {
   const [modalVisibleIcon, setModalVisibleIcon] = useState(false);
   const [modal, setModal] = useState(false);
@@ -114,6 +49,11 @@ export function Item({
     );
     setAtualiza(await sqlite.query("SELECT * FROM audios"));
   }
+
+  const [trimmer, setTrimmer] = useState({
+    trimmerLeftHandlePosition: 0,
+    trimmerRightHandlePosition: 10000,
+  });
 
   return (
     <View style={Styles.linha3}>
@@ -235,20 +175,14 @@ export function Item({
                 </TouchableOpacity>
 
                 <View style={{ flex: 1, flexDirection: "row" }}>
-                  <SliderContainer
-                    caption="<Slider/> 2 thumbs, min, max, and custom tint"
-                    sliderValue={[4, 16]}
-                  >
-                    <Slider
-                      animateTransitions
-                      maximumTrackTintColor="#d3d3d3"
-                      maximumValue={20}
-                      minimumTrackTintColor="black"
-                      minimumValue={4}
-                      step={2}
-                      thumbTintColor="black"
-                    />
-                  </SliderContainer>
+                  <Trimmer
+                    onHandleChange={onHandleChange}
+                    totalDuration={60000}
+                    trimmerLeftHandlePosition={
+                      trimmer.trimmerLeftHandlePosition
+                    }
+                    trimmerRightHandlePosition={trimmer.RightHandlePosition}
+                  />
                 </View>
 
                 <View style={Styles.editor}>
