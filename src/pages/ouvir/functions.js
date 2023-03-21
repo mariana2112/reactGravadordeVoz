@@ -17,6 +17,10 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import sqlite from "../../classes/sqlite";
 import { Slider } from "@miblanchard/react-native-slider";
 import Trimmer from "react-native-trimmer";
+import AudioRecorderPlayer from "react-native-audio-recorder-player";
+import _ from "lodash";
+
+const audioRecorderPlayer = new AudioRecorderPlayer(); //p tocar o audio
 
 export function Navegar(navigation) {
   navigation.navigate("Principal");
@@ -25,15 +29,25 @@ export function Navegar(navigation) {
 export function Item({
   data,
   setAtualiza,
-  setCliqueLista,
-  cliqueLista,
-  recording,
   onStartPlay,
   onPausePlay,
+  setCliqueLista,
+  cliqueLista,
 }) {
   const [modalVisibleIcon, setModalVisibleIcon] = useState(false);
   const [modal, setModal] = useState(false);
   const [nome, setNome] = useState("");
+  const [recording, setRecording] = useState(false);
+  const [position, setPosition] = useState({
+    currentPositionSec: 1,
+    currentDurationSec: 20,
+    playTime: "00:00",
+    duration: "00:00",
+  });
+  const [trimmer, setTrimmer] = useState({
+    trimmerLeftHandlePosition: 0,
+    trimmerRightHandlePosition: 13,
+  });
 
   //SEMPRE FAZER COM SQLITE, LEMBRA DE PUXAR COMO $
   async function deleteId(id_audio) {
@@ -50,10 +64,34 @@ export function Item({
     setAtualiza(await sqlite.query("SELECT * FROM audios"));
   }
 
-  const [trimmer, setTrimmer] = useState({
-    trimmerLeftHandlePosition: 0,
-    trimmerRightHandlePosition: 10000,
-  });
+  async function onHandleChange({ leftPosition, rightPosition }) {
+    setTrimmer({
+      trimmerRightHandlePosition: rightPosition,
+      trimmerLeftHandlePosition: leftPosition,
+    });
+  }
+
+  async function onStartPlay() {
+    setRecording(true);
+    const msg = await audioRecorderPlayer.startPlayer(data.caminho);
+    console.log(msg);
+    audioRecorderPlayer.addPlayBackListener((e) => {
+      setPosition({
+        currentPositionSec: e.currentPosition,
+        currentDurationSec: e.duration,
+        playTime: audioRecorderPlayer.mmss(
+          Math.floor(e.currentPosition / 1000)
+        ),
+        duration: audioRecorderPlayer.mmss(Math.floor(e.duration / 1000)),
+      });
+      return;
+    });
+  }
+
+  async function onPausePlay() {
+    setRecording(false);
+    await audioRecorderPlayer.pausePlayer();
+  }
 
   return (
     <View style={Styles.linha3}>
@@ -177,11 +215,13 @@ export function Item({
                 <View style={{ flex: 1, flexDirection: "row" }}>
                   <Trimmer
                     onHandleChange={onHandleChange}
-                    totalDuration={60000}
+                    totalDuration={position.currentDurationSec}
                     trimmerLeftHandlePosition={
                       trimmer.trimmerLeftHandlePosition
                     }
-                    trimmerRightHandlePosition={trimmer.RightHandlePosition}
+                    trimmerRightHandlePosition={
+                      trimmer.trimmerRightHandlePosition
+                    }
                   />
                 </View>
 
