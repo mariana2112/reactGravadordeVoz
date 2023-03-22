@@ -140,8 +140,8 @@ export function Item({
           <TouchableWithoutFeedback
             onPress={() => setModalVisibleIcon(!modalVisibleIcon)}
           >
-            <View style={Styles.modalOpen}>
-              <View style={Styles.modalView}>
+            <View style={Styles.modalOpen2}>
+              <View style={Styles.modalView2}>
                 <TouchableOpacity
                   style={Styles.buttonClose}
                   onPress={() => setModalVisibleIcon(false)}
@@ -200,18 +200,6 @@ export function Item({
           <TouchableWithoutFeedback onPress={() => setModal(!modal)}>
             <View style={Styles.modalOpen}>
               <View style={Styles.modalView}>
-                <TouchableOpacity
-                  style={Styles.buttonClose}
-                  onPress={() => setModal(false)}
-                >
-                  <LinearGradient
-                    colors={["#BFCDE0", "#5D5D81"]}
-                    style={Styles.buttonCloseStyles}
-                  >
-                    <AntDesign name="close" size={20} color="#fff" />
-                  </LinearGradient>
-                </TouchableOpacity>
-
                 <View style={{ flex: 1, flexDirection: "row" }}>
                   <Trimmer
                     onHandleChange={onHandleChange}
@@ -222,32 +210,36 @@ export function Item({
                     trimmerRightHandlePosition={
                       trimmer.trimmerRightHandlePosition
                     }
+                    tintColor="#3B3355"
+                    markerColor="#5D5D81"
+                    trackBackgroundColor="#BFCDE0"
+                    trackBorderColor="##5D5D81"
+                    scrubberColor="#b7e778"
+                    maximumZoomLevel={80}
+                    zoomMultiplier={-70}
+                    initialZoomValue={0.7}
                   />
                 </View>
 
                 <View style={Styles.editor}>
-                  <Text style={Styles.tempo}>{data.duracao}</Text>
-
                   <TouchableOpacity
-                    style={Styles.bt}
+                    style={Styles.pause}
                     onPress={recording ? onPausePlay : onStartPlay}
                   >
                     {recording ? (
-                      <Ionicons
-                        name="ios-stop-circle-outline"
-                        size={50}
-                        color={"#3B3355"}
-                      />
+                      <Foundation name="pause" size={50} color={"#3B3355"} />
                     ) : (
                       <AntDesign name="play" size={50} color={"#3B3355"} />
                     )}
                   </TouchableOpacity>
                 </View>
 
+                <Text style={Styles.tempo}>{data.duracao}</Text>
+
                 <View style={Styles.linhabt}>
                   <TouchableOpacity
                     style={Styles.back}
-                    onPress={() => update(data.id_audio)}
+                    onPress={() => setModal(false)}
                   >
                     <Text style={Styles.salvarText}>Back</Text>
                   </TouchableOpacity>

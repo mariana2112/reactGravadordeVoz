@@ -148,9 +148,9 @@ export default function Ouvir() {
 
             <TouchableOpacity onPress={recording ? onPausePlay : onStartPlay}>
               {recording ? (
-                <AntDesign name="play" size={100} color={"white"} />
-              ) : (
                 <Ionicons name="stop-circle" size={120} color={"white"} />
+              ) : (
+                <AntDesign name="play" size={100} color={"white"} />
               )}
             </TouchableOpacity>
 

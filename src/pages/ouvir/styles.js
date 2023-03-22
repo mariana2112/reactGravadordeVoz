@@ -145,14 +145,19 @@ const Styles = StyleSheet.create({
     flex: 1,
     width: 380,
     backgroundColor: "rgba(0, 0, 0, 0.5)",
-    alignSelf: "center",
+  },
+
+  modalOpen2: {
+    flex: 1,
+    width: 380,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
     justifyContent: "center",
     alignItems: "center",
   },
 
   buttonClose: {
     position: "absolute",
-    left: 280,
+    left: 350,
     top: -10,
   },
 
@@ -169,6 +174,13 @@ const Styles = StyleSheet.create({
   },
 
   modalView: {
+    backgroundColor: "white",
+    width: 375,
+    height: 350,
+    bottom: -410,
+  },
+
+  modalView2: {
     backgroundColor: "white",
     borderRadius: 10,
     width: 300,
@@ -228,7 +240,8 @@ const Styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginLeft: "10%",
-    backgroundColor: "black",
+    backgroundColor: "#3B3355",
+
     bottom: 180,
   },
 
@@ -242,7 +255,7 @@ const Styles = StyleSheet.create({
 
   linhabt: {
     flexDirection: "row",
-    top: 160,
+    top: 130,
     marginRight: 25,
   },
   backg2: {
@@ -253,15 +266,23 @@ const Styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "600",
     color: "#3B3355",
-    top: 15,
+    top: -98,
+    marginLeft: 40,
   },
+  linhadelete2: {
+    flex: 1,
+    flexDirection: "row",
+    marginTop: "-22%",
+  },
+
   editor: {
     flexDirection: "row",
-    justifyContent: "center",
-    paddingBottom: 25,
+    justifyContent: "space-around",
+    alignItems: "center",
   },
-  bt: {
-    margin: 10,
+  pause: {
+    bottom: 50,
+    marginLeft: 110,
   },
 });
 
