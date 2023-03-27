@@ -47,6 +47,8 @@ export function Item({
   const [trimmer, setTrimmer] = useState({
     trimmerLeftHandlePosition: 0,
     trimmerRightHandlePosition: 13,
+    scrubberPosition: 10000,
+    scrubInterval: 50,
   });
 
   //SEMPRE FAZER COM SQLITE, LEMBRA DE PUXAR COMO $
@@ -91,6 +93,30 @@ export function Item({
   async function onPausePlay() {
     setRecording(false);
     await audioRecorderPlayer.pausePlayer();
+  }
+
+  async function playScrubber() {
+    setTrimmer({ recording: true });
+
+    async function scrubberInterval({ setInterval }) {
+      setTrimmer({
+        scrubberPosition: state.scrubberPosition + state.scrubInterval,
+      });
+    }
+    state.scrubInterval;
+  }
+
+  async function pauseScrubber() {
+    clearInterval(state.scrubberInterval);
+
+    setTrimmer({
+      recording: false,
+      scrubberPosition: state.trimmerLeftHandlePosition,
+    });
+  }
+
+  async function onScrubbingComplete({ newValue }) {
+    setState({ recording: false, scrubberPosition: newValue });
   }
 
   return (
@@ -203,6 +229,7 @@ export function Item({
                 <View style={{ flex: 1, flexDirection: "row" }}>
                   <Trimmer
                     onHandleChange={onHandleChange}
+                    // totalDuration={6000}
                     totalDuration={position.currentDurationSec}
                     trimmerLeftHandlePosition={
                       trimmer.trimmerLeftHandlePosition
@@ -210,14 +237,14 @@ export function Item({
                     trimmerRightHandlePosition={
                       trimmer.trimmerRightHandlePosition
                     }
-                    tintColor="#3B3355"
-                    markerColor="#5D5D81"
+                    tintColor="#5D5D81"
                     trackBackgroundColor="#BFCDE0"
-                    trackBorderColor="##5D5D81"
-                    scrubberColor="#b7e778"
-                    maximumZoomLevel={80}
-                    zoomMultiplier={-70}
-                    initialZoomValue={0.7}
+                    trackBorderColor="#BFCDE0,"
+                    scrubberColor="#3B3355"
+                    scrubberPosition={trimmer.scrubberPosition}
+                    onScrubbingComplete={onScrubbingComplete}
+                    maximumZoomLevel={50}
+                    initialZoomValue={0.85}
                   />
                 </View>
 
